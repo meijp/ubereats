@@ -1,0 +1,59 @@
+<div class="header">
+  <div class="ubertitle">
+    <h1>UBER<br/><span class="logo">EATS</span></h1>
+  </div>
+</div>
+
+<div class="contents">
+  <div class="contentsrow">
+    <h2>新規登録</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="namefield">
+        <div class="field">
+          <%= f.label :Lastname %><br />
+          <%= f.text_field :lastname, placeholder: '苗字', class: "inputname"%>
+        </div>
+
+        <div class="field">
+          <%= f.label :Firstname %><br />
+          <%= f.text_field :firstname, placeholder: '名前', class: "inputname"%>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, placeholder: 'メールアドレスを入力してください', class: "input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :tel %><br />
+        <%= f.telephone_field :tel, placeholder: '電話番号を入力してください', class: "input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @validatable %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", placeholder: 'パスワードを入力してください', class: "input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'パスワードを入力してください', class: "input"%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up　　→", class: "submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<footer>
+  <p>© 2017 Uber Technologies Inc.</p>
+  <P>個人情報保護方針 | 契約条件</P>
+</footer>
