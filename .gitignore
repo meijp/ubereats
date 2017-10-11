@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 # Ignore bundler config.
 /.bundle
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
@@ -13,3 +14,12 @@
 /database.rules.json
 /firebase.json
 public/uploads/*
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# imagesフォルダをまるごと無視したい
+images/
+
+# logフォルダをまるごと無視したい
+log/
