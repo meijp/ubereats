@@ -1,3 +1,284 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#wrapper {
+  max-width: 1560px;
+  min-width: 769px;
+}
+
+header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+header #nav {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+header #upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  letter-spacing: 3.5px;
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+header h1 .logo {
+  color: #59BD5A;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+header li {
+  list-style: none;
+  margin-left: 16px;
+}
+
+header li a .btn {
+  width: 94px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+header li a .signin {
+  background-color: white;
+  border-color: #E0E0E0;
+}
+
+header li a .login {
+  background-color: #262626;
+  border-color: black;
+  color: white;
+}
+
+header #lower{
+  padding-top: 40px;
+}
+
+header #lower p {
+  max-width: 425px;
+  font-size: 36px;
+  padding-bottom: 24px;
+}
+
+header #lower .textarea {
+  width: 425px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #E0E0E0;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px 12px 48px;
+}
+
+header #lower .submit {
+  background-color: #59BD5A;
+  color: white;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 3px;
+
+  padding: 11px 20px;
+  margin-left: 16px;
+  min-width: 100px;
+}
+
+main {
+  background-color: #F5F5F5;
+}
+
+main .recommend {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+main .recommend .point {
+  width: calc(30% - 10px);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  width: 220px;
+}
+
+main .recommend .point h3 {
+  font-size: 28px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main .sline {
+  border-top: 3px solid #E0E0E0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  width: 40px;
+
+}
+
+main .parallax {
+    background-image: url("ubereats-img.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+    height: 50vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .ubereats-app {
+  width: 65%;
+}
+
+main .ubereats-app {
+  width: 70%;
+  margin: 0 auto;
+}
+
+main .left {
+  padding: 170px 0;
+}
+
+main .left .app-text h3 {
+  font-size: 36px;
+  font-weight: lighter;
+  min-width: 50%;
+  max-width: 90%;
+  line-height: 48px;
+}
+
+main .left .app-text p {
+  max-width: 400px;
+  padding: 10px 50px 40px 0;
+}
+
+main .app-dl p {
+  font-size: 22px;
+}
+
+main .app-dl ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+main .app-dl li {
+ padding-right: 10px;
+}
+
+main .app {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .app-list {
+  width: 50%;
+}
+
+main .right {
+  text-align: right;
+}
+
+main .app-list .mobile-image {
+  background-image: url(phone.png);
+   width: 340px;
+   height: 654px;
+
+  transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  margin-top: -130px;
+}
+
+main .app-list .mobile-image .mobileimg2 {
+  position:absolute;
+  width: 276px;
+  top: 100px;
+  left: 31px;
+}
+
+
+footer {
+  background-color: #262626;
+  padding: 54px 42px 54px 64px;
+}
+
+footer h2{
+  font-size: 29px;
+  letter-spacing: 3.5px;
+  color: white;
+}
+
+footer h2 .logo {
+  color: #59BD5A;
+}
+
+footer .line {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid;
+  color: #E0E0E0;
+  opacity: 0.3;
+}
+
+footer .info {
+  color: #DCDCDC;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10;
+  letter-spacing: 1px;
+}
+
+footer .info ul {
+  width: calc(33.3% - 10px);
+}
+
+footer .info li {
+  font-size: 13px;
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+footer .dl {
+  display: flex;
+  justify-content: center;
+}
+
+footer .dl ul {
+  display: flex;
+  justify-content: center;
+}
+footer .dl li {
+  font-size: 14px;
+  color: #59BD5A;
+  list-style: none;
+  margin: 0 12px;
+}
+
+footer .legal {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .legal p{
+  display: flex;
+  color: #DCDCDC;
+  width: 33.3%;
+  font-size: 12px;
+}
