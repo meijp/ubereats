@@ -22,7 +22,7 @@
           <input class="textarea" type="text" name="location" placeholder="配達先の住所を入力してください">
           <input class="submit" type="submit" value="検索">
         </form> -->
-<%= form_tag stores_path, :method => 'get' do %>
+<%= form_tag search_tops_path, :method => 'get' do %>
 <%= text_field_tag :search, params[:search], class: "textarea", placeholder: '配達先の住所を入力してください' %>
 <%= submit_tag "Search", :name => nil, class: "submit" %>
 <% end %>
@@ -34,7 +34,7 @@
   <main>
     <div class="recommend">
       <div class="point">
-        <img src="assets/uberpoint3.png" alt="Good selection">
+        <img src="assets/uberpoint1.jpg" alt="Good selection" class="pointimg">
         <div class="sline"></div>
         <h3>豊富なラインアップ</h3>
         <p>100 を超える素敵なレストランのお料理を、UberEATS がお届けします。</p>

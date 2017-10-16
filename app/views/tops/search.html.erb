@@ -1,0 +1,88 @@
+<header class="storesheader">
+    <div class="storesnav">
+      <h1>UBER <span class="logo">EATS</span></h1>
+      <% if user_signed_in? %>
+        <ul>
+          <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
+        </ul>
+      <% end %>
+    </div>
+</header>
+<!-- /header -->
+
+<main class="searchmain">
+  <div class="results">
+    <h5>Tokyo のレストラン</h5>
+    <div class="result">
+      <% @stores.each do |store| %>
+        <div class="store">
+          <%= image_tag(store.image.url, class: 'resultimg') %>
+          <div class="resulttext">
+            <h3><%= store.name %></h3>
+            <p class="genre">・<%= store.genre %></p>
+            <p><%= store.mindelitime %> - <%= store.maxdelitime %>Min</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
+<!-- /main -->
+
+<footer>
+  <div class="footer-logo">
+    <h2>UBER <span class="logo">EATS</span></h2>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="info">
+    <ul>
+      <li>日本語</li>
+      <li>#UberEATS</li>
+      <li>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </li>
+    </ul>
+
+    <ul>
+      <li>UberEATS について</li>
+      <li>配達パートナーになる</li>
+      <li><%= link_to "レストラン パートナーになる", new_store_registration_path, class: 'store' %>(リンク)</li>
+    </ul>
+
+    <ul>
+      <li>すべての都市を見る</li>
+      <li>料金について</li>
+      <li>ヘルプ</li>
+      <li>よくあるご質問</li>
+    </ul>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="dl">
+    <ul>
+      <li>App Store からダウンロード</li>
+      <li>Google Play からダウンロード</li>
+    </ul>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="legal">
+    <p>© 2017 Uber Technologies Inc.</p>
+    <p>プライバシー</p>
+    <p>ご利用規約</p>
+  </div>
+
+</footer>
+<!-- /footer -->

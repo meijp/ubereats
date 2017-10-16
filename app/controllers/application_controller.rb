@@ -18,6 +18,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_in) do |store_params|
       store_params.permit(:email, :password, :remember_me)
     end
-
   end
 end

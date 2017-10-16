@@ -12,11 +12,14 @@ Rails.application.routes.draw do
 
   root 'tops#index'
   resources :users
-  resources :stores
+  resources :stores do
+    resources :storetops, only: [:index, :new, :create, :edit]
+  end
 
   resources :tops do
     collection do
       get 'search'
     end
   end
+
 end

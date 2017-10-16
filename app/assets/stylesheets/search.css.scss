@@ -1,0 +1,38 @@
+.results {
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.results h5 {
+  font-size: 23px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.result {
+  display: flex;
+}
+
+.result .store {
+  width: calc(33.3% - 5px);
+  margin: 5px;
+}
+
+.result .resultimg {
+  overflow: hidden;
+  height: 240px;
+  width: 250px;
+}
+
+.result .resulttext {
+  width: 80%;
+}
+
+.result p {
+  font-size: 13px;
+}
+
+.result p.genre{
+  color: #A9A9A9;
+}
