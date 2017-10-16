@@ -1,0 +1,175 @@
+<div class="storeswrapper">
+<div class="subwrapper">
+  <header class="storesheader">
+      <div class="storesnav">
+        <h1>UBER <span class="logo">EATS</span></h1>
+
+        <ul class="right-nav">
+          <li><%= link_to "サインイン", new_store_session_path, class: 'btn signin' %></li>
+        </ul>
+      </div>
+  </header>
+  <!-- /header -->
+
+  <main class="storesmain">
+    <div class="storesignup">
+
+      <div class="storesintro">
+        <p>デリバリーを通して、<br/>お店の「美味しい」をお届けします。</p>
+      </div>
+
+      <div class="storesentry">
+        <h2>UberEATS に出店しませんか</h2>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="field">
+            <%= f.text_field :name, placeholder: '飲食店名', class: "input"%>
+          </div>
+
+          <div class="field">
+            <%= f.email_field :email, autofocus: true, placeholder: 'メール', class: "input"%>
+          </div>
+
+          <div class="field">
+            <%= f.telephone_field :tel, placeholder: '電話番号', class: "input"%>
+          </div>
+
+          <div class="field">
+            <%= f.text_field :address, placeholder: '住所', class: "input"%>
+          </div>
+
+          <div class="field">
+            <%= f.text_field :genre, placeholder: '料理の種類', class: "input"%>
+          </div>
+
+          <div class="field">
+            <!-- <i class="fa fa-picture-o" aria-hidden="true"></i> -->
+            <%= f.file_field :image, class: "imgfile"%>
+          </div>
+
+          <div class="delitime">
+            <div class="field">
+              <%= f.label :最短お届け時間, class: "inputtime" %><br />
+              <%= f.number_field :mindelitime, class: "inputtime"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :最長お届け時間, class: "inputtime" %><br />
+              <%= f.number_field :maxdelitime, class: "inputtime"%>
+            </div>
+          </div>
+
+          <div class="delitime">
+            <div class="field">
+              <%= f.label :開店時間, class: "inputtime" %><br />
+              <%= f.time_select :opentime, include_blank: :true, class: "inputtime"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :閉店時間, class: "inputtime" %><br />
+              <%= f.time_select :closetime, include_blank: :true, class: "inputtime"%>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", placeholder: 'password', class: "input" %>
+          </div>
+
+          <div class="field">
+            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'password_confirmation', class: "input" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "送信", class: "submit" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="youtube">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/qSi6TaXRhdc?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div>
+      <div class="srecommend">
+        <div class="spoint">
+        <div class="sline"></div>
+          <h3>お店に無理のない形で、店舗収益アップ</h3>
+          <p>自慢のお料理を、さらに多くのお客様にお届けしませんか? UberEATS を使えば、フードデリバリーを通してより多くの方々にお食事を提供することできます。また、混雑時にも柔軟な対応が可能なため、無理のない形で売上を向上することができます。</p>
+        </div>
+        <div class="spoint">
+          <div class="sline"></div>
+          <h3>出来立てを、効率的に素早くお届け</h3>
+          <p>ご注文の受け付け、配達、支払い処理等、デリバリーの面倒事は UberEATS が引き受けます。レストラン様には、美味しいお食事の調理に専念していただけます。どこよりも簡単、効率的にお食事を届けられるプラットフォーム。それが UberEATS です。</p>
+        </div>
+        <div class="spoint">
+          <div class="sline"></div>
+          <h3>どんな時でも、安心のサポート</h3>
+          <p>UberEATSでは、レストランをサポートするために、初期設定、メニューのプロモーション、配達時間の効率化などを一手に担います。できたての状態で、丁寧にお食事をお届けします。万が一の際にも、電話を通していつでも連絡を取ることができます。それ以上のサポートにも、いつでも対応いたします。</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="footer-logo">
+      <h2>UBER <span class="logo">EATS</span></h2>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="info">
+      <ul>
+        <li>日本語</li>
+        <li>#UberEATS</li>
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </li>
+      </ul>
+
+      <ul>
+        <li>UberEATS について</li>
+        <li>配達パートナーになる</li>
+        <li>レストラン パートナーになる</li>
+      </ul>
+
+      <ul>
+        <li>すべての都市を見る</li>
+        <li>料金について</li>
+        <li>ヘルプ</li>
+        <li>よくあるご質問</li>
+      </ul>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="dl">
+      <ul>
+        <li>App Store からダウンロード</li>
+        <li>Google Play からダウンロード</li>
+      </ul>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="legal">
+      <p>© 2017 Uber Technologies Inc.</p>
+      <p>プライバシー</p>
+      <p>ご利用規約</p>
+    </div>
+
+  </footer>
+
+</div>
+</div>
