@@ -1,0 +1,288 @@
+body, html {
+  height: 100%;
+  background-color: white;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #262626;
+}
+
+// registrations new
+.header {
+  background-image: image-url("nami.jpg");
+  height: 40px;
+  position: relative;
+
+}
+
+.header .ubertitle {
+  background-color: black;
+  height: 94px;
+  width: 94px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  left: 50%;
+  top: 20px;
+  text-align: center;
+  margin-left: -47px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+}
+
+.header h1 .logo {
+  color: #59BD5A;
+  font-weight: lighter;
+}
+
+.contents {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 64px;
+}
+
+.contentsrow {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.contentsrow h2 {
+  font-weight: lighter;
+}
+
+.contentsrow .field {
+  padding-top: 20px;
+}
+
+.contentsrow .input {
+  font-size: 14px;
+  line-height: 24px;
+  height: 40px;
+  width: 95%;
+  padding: 20px 20px;
+}
+
+.contentsrow .submit {
+  background-color: #59BD5A;
+  color: white;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 3px;
+
+  line-height: 24px;
+  vertical-align: middle;
+  height: 40px;
+  width: 95%;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contentsrow .namefield {
+  display: flex;
+}
+
+.contentsrow .namefield .field {
+  width: 50%;
+}
+
+.contentsrow .namefield .inputname {
+  height: 40px;
+  padding: 20px 60px 20px 20px ;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 64px;
+  position:fixed;
+  bottom:0;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+
+}
+
+.footer p {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+
+// sessions new　↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+.storeswrapper{
+  width: 100%;
+  background-color: #E5E5E4;
+}
+
+.subwrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+}
+.storesheader {
+  width: 100%;
+  // background-color: white;
+  padding: 0;
+  min-height: 74px;
+  max-height: 74px;
+  display: flex;
+}
+
+.storesnav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.storesmain {
+  // padding-top: 74px;
+  background-color: white;
+  padding: 0;
+  width: 100%;
+  // position: absolute;
+    // position: absolute;
+    // top: 140px;
+    // right: 40px;
+
+    // margin: 0;
+  // position: absolute;
+}
+
+.storesignup {
+  padding: 5%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.storesintro {
+  width: 60%;
+}
+
+.storesintro p {
+  max-width: 500px;
+  font-size: 36px;
+}
+
+// .storesmainupper p {
+//   width: 60%;
+//   font-size: 36px;
+//   padding-bottom: 24px;
+// }
+
+.storesentry {
+  background-color: #F4F4F4;
+  width: 30%;
+  max-width: 300px;
+  margin: 23px;
+  padding:  23px;
+  border-top: 10px solid #e5e5e5;
+
+  position: absolute;
+  top: 140px;
+  // right: 40px;
+  right: 10%;
+}
+
+.storesentry .field {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.storesentry .input {
+  font-size: 10px;
+  height: 20px;
+  width: 230px;
+  padding: 10px;
+}
+
+.storesentry .delitime {
+  display: flex;
+}
+
+.storesentry .delitime .inputtime {
+  padding: 0;
+  font-size: 12px;
+}
+
+.storesentry .inputtime {
+  font-size: 10px;
+  height: 20px;
+  width: 100px;
+  padding: 15px;
+}
+
+.storesentry .submit {
+  background-color: #59BD5A;
+  color: white;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 3px;
+
+  line-height: 24px;
+  vertical-align: middle;
+  height: 30px;
+  width: 95%;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.youtube {
+  // background-image: url(https://storage.googleapis.com/ubereats/restaurants/us/canters-deli.jpg);
+  // background-repeat: no-repeat;
+  // background-size: 110%;
+}
+
+  // width: 400px;
+  // padding: 32px;
+  // position: relative;
+  // top: -150px;
+  // right: 40px;
+
+.srecommend {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.srecommend .spoint {
+  width: calc(33.3%);
+  margin: 20px;
+}
+
+.srecommend .spoint h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.srecommend .spoint p {
+  font-size: 12px;
+}

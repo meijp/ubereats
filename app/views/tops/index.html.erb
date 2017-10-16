@@ -6,7 +6,8 @@
         <h1>UBER <span class="logo">EATS</span></h1>
         <% if user_signed_in? %>
           <ul>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn logout'%></li>
+            <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
           </ul>
         <% else %>
           <ul>
@@ -17,10 +18,15 @@
       </div>
       <div id="lower">
         <p>配達に対応するお近くのレストランを検索しましょう</p>
-        <form>
+ <!--        <form>
           <input class="textarea" type="text" name="location" placeholder="配達先の住所を入力してください">
           <input class="submit" type="submit" value="検索">
-        </form>
+        </form> -->
+<%= form_tag stores_path, :method => 'get' do %>
+<%= text_field_tag :search, params[:search], class: "textarea", placeholder: '配達先の住所を入力してください' %>
+<%= submit_tag "Search", :name => nil, class: "submit" %>
+<% end %>
+
       </div>
     </div>
   </header>
@@ -106,7 +112,7 @@
       <ul>
         <li>UberEATS について</li>
         <li>配達パートナーになる</li>
-        <li>レストラン パートナーになる</li>
+        <li><%= link_to "レストラン パートナーになる", new_store_registration_path, class: 'store' %>(リンク)</li>
       </ul>
 
       <ul>

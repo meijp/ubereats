@@ -40,20 +40,23 @@ header li {
   margin-left: 16px;
 }
 
-header li a .btn {
-  width: 94px;
-  height: 40px;
+header li a.btn {
+  // width: 94px;
+  // height: 40px;
   border: 1px solid;
   border-radius: 2px;
   font-size: 13px;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-header li a .signin {
+header li a.signin {
   background-color: white;
   border-color: #E0E0E0;
+  color: black;
 }
 
-header li a .login {
+header li a.login {
   background-color: #262626;
   border-color: black;
   color: white;
@@ -281,4 +284,11 @@ footer .legal p{
   color: #DCDCDC;
   width: 33.3%;
   font-size: 12px;
+}
+
+footer a.store {
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  color: #DCDCDC;
 }
