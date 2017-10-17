@@ -1,17 +1,87 @@
-<header>
-  <div class="snav">
-    <h1>UBER <span class="logo">EATS</span></h1>
-
-    <ul id="dropmenu">
-      <li><input class="droplist" type="text" name="location" placeholder="速やかにお届け"></li>
-      <li>行き先：</li>
-      <li><input class="textarea" type="text" name="location" placeholder="住所を入力してください"></li>
-    </ul>
-
-    <ul class="right-nav">
-      <li><input type="button" onclick="location.href='#'"value="サインイン" class="btn signin"></li>
-      <li><input type="button" onclick="location.href='#'"value="登録" class="btn login"></li>
-      <li><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
-    </ul>
-  </div>
+<header class="storesheader">
+    <div class="storesnav">
+      <h1>UBER <span class="logo">EATS</span></h1>
+      <% if user_signed_in? %>
+        <ul>
+          <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
+        </ul>
+      <% end %>
+    </div>
 </header>
+<!-- /header -->
+
+<main>
+<%# <% @stores.each do |store| %>
+  <div class="shop-top" style="background-image: url('<%= @store.image %>'"">
+    <div class="shop-into">
+      <div class="shop-text">
+        <p class="shop-name"><%= @store.name %><br/>PARLA Gaienmae</p>
+        <div class="shop-type">
+          <ul>
+            <li><%= @store.genre %></li>
+          </ul>
+        </div>
+        <p class="open"><span><%= @store.mindelitime %> - <%= @store.maxdelitime %> min</span></p>
+      </div>
+    </div>
+  </div>
+<%# <% end %>
+
+  <div id="contents">
+    <div id="sidebar">
+      <div class="shopinfo">
+        <h4><%= @store.name %> PARLA Gaienmae のメニュー</h4>
+        <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= @store.opentime.to_formatted_s(:without_second) %> - <%= @store.closetime %></p>
+        <p>メイン Main</p>
+      </div>
+    </div>
+
+    <div id="menu">
+      <div class="cate">メイン Main</div>
+      <div class="item">
+        <div class="itemtext">
+          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
+          <p><span>※クレープの生地に卵・乳・小麦・ナッツが含まれています。<span></p>
+          <p>¥1404</p>
+        </div>
+        <img src="SicilianEmerald.png" alt="イラスト２" width=160 height=160>
+      </div>
+
+      <div class="item">
+        <div class="itemtext">
+          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
+          <p>※クレープの生地に卵・乳・小麦・ナッツが含まれています。</p>
+          <p>¥1404</p>
+        </div>
+        <img src="SicilianEmerald.png" alt="イラスト２" width=160 height=160>
+      </div>
+
+      <div class="item">
+        <div class="itemtext">
+          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
+          <p>※クレープの生地に卵・乳・小麦・ナッツが含まれています。</p>
+          <p>¥1404</p>
+        </div>
+        <img src="SicilianEmerald.png" alt="イラスト２" width=160 height=160>
+      </div>
+
+      <div class="item">
+        <div class="itemtext">
+          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
+          <p>※クレープの生地に卵・乳・小麦・ナッツが含まれています。</p>
+          <p>¥1404</p>
+        </div>
+        <img src="SicilianEmerald.png" alt="イラスト２">
+      </div>
+
+    </div>
+  </div>
+
+</main>
+<!-- /main -->

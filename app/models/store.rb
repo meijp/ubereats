@@ -14,4 +14,6 @@ class Store < ActiveRecord::Base
   #   end
   # end
 
+  has_many :products
+
 end
