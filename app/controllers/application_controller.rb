@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :configure_permitted_params, if: :devise_controller?
 
@@ -19,4 +17,20 @@ class ApplicationController < ActionController::Base
       store_params.permit(:email, :password, :remember_me)
     end
   end
+
+  private
+  # ログイン後のリダイレクト先
+      # def after_sign_in_path_for(resource)
+      #   case resource
+      #   when User
+      #     root_path
+      #   when Stores
+      #      store_storetops_path(@stores)
+      #   end
+      # end
+
+  def after_sign_in_path_for(resource)
+    store_storetops_path(resource) #your path
+  end
+
 end

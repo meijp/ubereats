@@ -2,8 +2,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # リサイズしたり画像形式を変更するのに必要
   include CarrierWave::MiniMagick
 
-  # 画像の上限を700pxにする
-  process :resize_to_limit => [700, 700]
+  # 画像の上限を1200pxにする
+  process :resize_to_limit => [1200, 1200]
 
   # 保存形式をJPGにする
   process :convert => 'jpg'

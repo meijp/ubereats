@@ -1,3 +1,146 @@
-// Place all the styles related to the storetops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+main {
+  // padding-top: 74px;
+}
+
+main .shop-top {
+ // background-image: url("parla_top.png");
+ background-size:cover;
+ background-position: center center;
+ height: 364px;
+}
+
+main .shop-top .shop-into {
+  width: 80%;
+  height: 364px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+main .shop-top .shop-text {
+  background-color: white;
+  max-width: 400px;
+  padding: 32px;
+  margin-left: 60px;
+  border-radius: 4px;
+}
+
+main .shop-top .shop-name {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: lighter;
+  line-height: 48px;
+}
+
+main .shop-top .shop-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .shop-top ul {
+  display: flex;
+  align-items: center;
+}
+
+main .shop-top li {
+  padding-right: 20px;
+  font-size: 13px;
+  color: gray;
+}
+
+main .shop-top .open {
+  text-align: center;
+}
+
+main .shop-top .open span {
+  background-color: black;
+  border-radius: 13px;
+  font-size: 13px;
+  color: white;
+  padding: 3px 20px;
+}
+
+
+
+main #contents {
+  display: flex;
+  padding: 40px 32px;
+/*  flex-wrap: wrap;*/
+  width: 95%;
+  margin: 0 auto;
+}
+
+main #sidebar {
+  width: 20%;
+  margin-right: 24px;
+  margin-top: 72px;
+}
+
+main .shopinfo {
+  border: 1px solid #E0E0E0;
+  padding: 12px 20px;
+}
+
+main .shopinfo h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+main .shopinfo p {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #757575;
+}
+
+
+main #menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+}
+
+main #menu .cate {
+  width: 100%;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+main #menu .item {
+  border: 1px solid #E0E0E0;
+  width: calc(50% - 24px);
+/*  height: 160px;*/
+  margin-bottom: 24px;
+  margin-right: 24px;
+  flex: 0 1 auto;
+
+  display: flex;
+}
+
+main #menu .itemtext {
+  padding: 16px 20px;
+}
+
+main #menu .itemtext h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: lighter;
+}
+
+main #menu .itemtext p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+main #menu .itemtext span {
+  color: #757575;
+}
+
+main #menu img {
+  width: 160px;
+  height: 160px;
+}
+
