@@ -4,6 +4,8 @@ class Store < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :products
+
   mount_uploader :image, ImageUploader
 
   # def self.search(search) #self.でクラスメソッドとしている
@@ -14,6 +16,5 @@ class Store < ActiveRecord::Base
   #   end
   # end
 
-  has_many :products
 
 end

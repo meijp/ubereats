@@ -18,7 +18,7 @@
 
 <main>
 <%# <% @stores.each do |store| %>
-  <div class="shop-top" style="background-image: url('<%= @store.image %>'"">
+  <div class="shop-top" style="background-image: url('<%= @store.image %>')">
     <div class="shop-into">
       <div class="shop-text">
         <p class="shop-name"><%= @store.name %><br/>PARLA Gaienmae</p>
@@ -36,52 +36,36 @@
   <div id="contents">
     <div id="sidebar">
       <div class="shopinfo">
-        <h4><%= @store.name %> PARLA Gaienmae のメニュー</h4>
+        <h4><%= @store.name %> のメニュー</h4>
         <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= @store.opentime.to_formatted_s(:without_second) %> - <%= @store.closetime %></p>
         <p>メイン Main</p>
       </div>
     </div>
 
-    <div id="menu">
+    <div id="menus">
       <div class="cate">メイン Main</div>
-      <div class="item">
-        <div class="itemtext">
-          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
-          <p><span>※クレープの生地に卵・乳・小麦・ナッツが含まれています。<span></p>
-          <p>¥1404</p>
-        </div>
-        <img src="SicilianEmerald.png" alt="イラスト２" width=160 height=160>
-      </div>
+      <% @products.each do |product| %>
 
-      <div class="item">
-        <div class="itemtext">
-          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
-          <p>※クレープの生地に卵・乳・小麦・ナッツが含まれています。</p>
-          <p>¥1404</p>
-        </div>
-        <img src="SicilianEmerald.png" alt="イラスト２" width=160 height=160>
-      </div>
+        <div class="menu">
+        <%= link_to product_path(product.id) do %>
 
-      <div class="item">
-        <div class="itemtext">
-          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
-          <p>※クレープの生地に卵・乳・小麦・ナッツが含まれています。</p>
-          <p>¥1404</p>
+          <div class="item">
+              <div class="itemtext">
+                <h5><%= product.name %></h5>
+                <p><span><%= product.detail %></span></p>
+                <p>¥<%= product.price %></p>
+              </div>
+              <div class="img" style="background-image: url('<%= product.image %>')"></div>
+          </div>
+        <% end %>
         </div>
-        <img src="SicilianEmerald.png" alt="イラスト２" width=160 height=160>
-      </div>
 
-      <div class="item">
-        <div class="itemtext">
-          <h5>ピスタチオマスカルポーネ グリオット バニラ蜂蜜 Sicilian Emerald</h5>
-          <p>※クレープの生地に卵・乳・小麦・ナッツが含まれています。</p>
-          <p>¥1404</p>
-        </div>
-        <img src="SicilianEmerald.png" alt="イラスト２">
+      <% end %>
       </div>
-
     </div>
-  </div>
+
+
+
 
 </main>
 <!-- /main -->
