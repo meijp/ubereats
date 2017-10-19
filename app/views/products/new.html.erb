@@ -1,0 +1,61 @@
+<div class="header">
+  <div class="ubertitle">
+    <h1>UBER<br/><span class="logo">EATS</span></h1>
+  </div>
+</div>
+
+<div class="contents">
+  <div class="contentsrow">
+    <h2>商品登録</h2>
+
+    <%= form_for @product do |f| %>
+
+      <div class="field">
+        <%= f.label :商品名, class: "input" %><br />
+        <%= f.text_field :name, class: "input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :商品価格, class: "input" %><br />
+        <%= f.number_field :price, class: "input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :商品説明, class: "input" %><br />
+        <%= f.text_field :detail, class: "input"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :商品画像, class: "input" %><br />
+        <%= f.file_field :image, class: "imgfile"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :商品カテゴリー, class: "input" %><br />
+        <%= f.text_field :category, class: "input"%>
+      </div>
+
+      <div class="field">
+          <%= f.label :在庫数, class: "input" %><br />
+          <%= f.number_field :stock, class: "input"%>
+      </div>
+
+    <%#   <%= hidden_field_tag :store_id, current_store.id %>
+      <div class="field">
+        <%= f.label :StoreID, class: "input" %><br />
+        <%= f.number_field :store_id, class: "input"%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "送信", class: "submit" %>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2017 Uber Technologies Inc.</p>
+  <P>個人情報保護方針 | 契約条件</P>
+</div>

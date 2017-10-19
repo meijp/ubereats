@@ -92,7 +92,7 @@ main .shopinfo p {
 }
 
 
-main #menu {
+main #menus {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -102,17 +102,16 @@ main #menu {
   width: 80%;
 }
 
-main #menu .cate {
+main #menus .cate {
   width: 100%;
   display: block;
   font-size: 22px;
   margin-bottom: 40px;
 }
 
-main #menu .item {
+main #menus .item {
   border: 1px solid #E0E0E0;
-  width: calc(50% - 24px);
-/*  height: 160px;*/
+  // width: calc(50% - 24px);
   margin-bottom: 24px;
   margin-right: 24px;
   flex: 0 1 auto;
@@ -120,27 +119,51 @@ main #menu .item {
   display: flex;
 }
 
-main #menu .itemtext {
+main #menus .itemtext {
   padding: 16px 20px;
 }
 
-main #menu .itemtext h5 {
+main #menus .itemtext h5 {
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: lighter;
 }
 
-main #menu .itemtext p {
+main #menus .itemtext p {
   font-size: 13px;
   margin-bottom: 8px;
 }
 
-main #menu .itemtext span {
+main #menus .itemtext span {
   color: #757575;
 }
 
-main #menu img {
-  width: 160px;
-  height: 160px;
+main #menus .img {
+background-size: cover;
+overflow: hidden;
+background-position: center;
+background-repeat: no-repeat;
+height: 160px;
+width: 160px;
 }
+
+main .menu {
+  display: flex;
+  width: calc(50% - 24px);
+}
+
+main .menu a {
+  text-decoration: none;
+}
+
+// modalwindow
+
+
+
+
+
+
+
+
+
 

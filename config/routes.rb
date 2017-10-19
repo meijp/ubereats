@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :storetops, only: [:index, :new, :create, :edit]
   end
 
+resources :products
+
   resources :tops do
     collection do
       get 'search'
