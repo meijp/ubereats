@@ -1,0 +1,42 @@
+<header class="storesheader">
+    <div class="storesnav">
+      <h1>UBER <span class="logo">EATS</span></h1>
+      <% if user_signed_in? %>
+        <ul>
+          <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
+        </ul>
+      <% end %>
+    </div>
+</header>
+
+<div id="menu">
+  <div class="shopping-cart">
+    <% if !@cart_item.nil? && @cart_item.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+        <% @cart_item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% if @cart_items.size == 0 %>
+      <p class="text-center">
+        There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+      </p>
+    <% else %>
+      <% @cart_items.each do |cart_item| %>
+        <%= render 'carts/cart_row', product: cart_item.product, cart_item: cart_item, show_total: true %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'tops/footer'%>
+<!-- /footer -->

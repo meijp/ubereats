@@ -1,13 +1,54 @@
+<header class="storesheader">
+    <div class="storesnav">
+      <h1>UBER <span class="logo">EATS</span></h1>
+      <% if user_signed_in? %>
+        <ul>
+          <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
+        </ul>
+      <% end %>
+    </div>
+</header>
+
 <div id="menu">
     <div class="item">
       <div class="img" style="background-image: url('<%= @product.image.url %>')"></div>
+
       <div class="itemtext">
         <h5><%= @product.name %></h5>
         <p><span><%= @product.detail %><span></p>
-        <p>¥<%= @product.price %></p>
-      </div>
+        <!-- <p>¥<%= @product.price %></p> -->
+
+<!-- 変更前 -->
+        <%#= form_for @item, url: add_item_path, method: :post do |f| %>
+          <%#= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <%#= f.hidden_field :product_id, value: @product.id %>
+          <%#= f.submit "カートに入れる", class: "submit" %>
+        <%# end %>
+<!-- 変更後 -->
+      <%#= form_for @item, url: add_item_path, method: :post do |f| %>
+
+      <%= form_for @item do |f| %>
+      <h4 class="text-right">Unit Price: <span style="color: green">
+      <%= f.hidden_field :unit_price, value: @product.price %>¥<%= @product.price %></span></h4>
+        <div class="input-group">
+          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <div class="input-group-btn">
+            <%= f.hidden_field :product_id, value: @product.id %>
+            <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
 
 
-
+    </div>
   </div>
 </div>
+
+<%= render 'tops/footer'%>
+<!-- /footer -->

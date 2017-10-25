@@ -8,7 +8,7 @@
   <div class="contentsrow">
     <h2>商品登録</h2>
 
-    <%= form_for @product do |f| %>
+    <%= form_for @product, url: new_store_product_path do |f| %>
 
       <div class="field">
         <%= f.label :商品名, class: "input" %><br />
@@ -39,12 +39,12 @@
           <%= f.label :在庫数, class: "input" %><br />
           <%= f.number_field :stock, class: "input"%>
       </div>
-
-    <%#   <%= hidden_field_tag :store_id, current_store.id %>
-      <div class="field">
-        <%= f.label :StoreID, class: "input" %><br />
-        <%= f.number_field :store_id, class: "input"%>
-      </div>
+    <%= f.hidden_field :store_id, value: current_store.id %>
+    <%#= hidden_field_tag :store_id, current_store.id %>
+ <!--      <div class="field">
+        <%#= f.label :StoreID, class: "input" %><br />
+        <%#= f.number_field :store_id, class: "input"%>
+      </div> -->
 
       <div class="actions">
         <%= f.submit "送信", class: "submit" %>

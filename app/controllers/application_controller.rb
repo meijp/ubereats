@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_params, if: :devise_controller?
 
+# for device
   def configure_permitted_params
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
       user_params.permit(:email, :lastname, :firstname, :tel, :password, :password_confirmation)
@@ -18,19 +19,38 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
-  # ログイン後のリダイレクト先
-      # def after_sign_in_path_for(resource)
-      #   case resource
-      #   when User
-      #     root_path
-      #   when Stores
-      #      store_storetops_path(@stores)
-      #   end
-      # end
+# for cart
+  # helper_method :current_cart
+  # def current_cart
+  #   if session[:cart_id]
+  #     @cart = Cart.find(session[:cart_id])
+  #   else
+  #     @cart = Cart.create
+  #     session[:cart_id] = @cart.id
+  #   end
+  # end
 
+  helper_method :current_cart
+  def current_cart
+    if !session[:cart_id].nil?
+      Cart.find(session[:cart_id])
+    else
+      Cart.new
+    end
+  end
+
+  private
+    # store_storetops_path(resource)
+    # tops_path #your path
+
+  # ログイン後のリダイレクト先
   def after_sign_in_path_for(resource)
-    store_storetops_path(resource) #your path
+    case resource
+    when User
+      root_path
+    when Store
+       store_storetops_path(resource)
+    end
   end
 
 end
