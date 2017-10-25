@@ -19,7 +19,6 @@ public/uploads/*
 .byebug_history
 
 # imagesフォルダをまるごと無視したい
-images/
 
 # logフォルダをまるごと無視したい
 log/
