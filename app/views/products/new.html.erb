@@ -8,7 +8,7 @@
   <div class="contentsrow">
     <h2>商品登録</h2>
 
-    <%= form_for @product, url: new_store_product_path do |f| %>
+    <%= form_for @product, url: store_products_path(current_store) do |f| %>
 
       <div class="field">
         <%= f.label :商品名, class: "input" %><br />
