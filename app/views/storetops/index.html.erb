@@ -1,19 +1,4 @@
-<header class="storesheader">
-    <div class="storesnav">
-      <h1>UBER <span class="logo">EATS</span></h1>
-      <% if user_signed_in? %>
-        <ul>
-          <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
-        </ul>
-      <% else %>
-        <ul>
-          <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
-          <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
-        </ul>
-      <% end %>
-    </div>
-</header>
+<%= render 'tops/header'%>
 <!-- /header -->
 
 <main>
@@ -63,9 +48,8 @@
       <% end %>
       </div>
     </div>
-
-
-
-
 </main>
 <!-- /main -->
+
+<%= render 'tops/footer'%>
+<!-- /footer -->

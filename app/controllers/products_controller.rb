@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @cart_item = current_cart.cart_items.new
   end
 
   def new
@@ -14,7 +14,14 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @item = CartItem.new
   end
+
+  # def add_to_cart
+  #   product = Product.find(params[:id])
+  #   @cart = find_cart
+  #   @cart.add_product(product)
+  # end
 
   private
   def product_params

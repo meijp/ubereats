@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017120247) do
+ActiveRecord::Schema.define(version: 20171023073016) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer  "quantity",    limit: 4
+    t.integer  "unit_price",  limit: 4
+    t.integer  "total_price", limit: 4
+    t.integer  "product_id",  limit: 4
+    t.integer  "cart_id",     limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "cart_items", ["cart_id"], name: "index_cart_items_on_cart_id", using: :btree
+  add_index "cart_items", ["product_id"], name: "index_cart_items_on_product_id", using: :btree
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "subtotal",   limit: 4
+    t.integer  "shipping",   limit: 4
+    t.integer  "total",      limit: 4
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -73,4 +94,6 @@ ActiveRecord::Schema.define(version: 20171017120247) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "cart_items", "carts"
+  add_foreign_key "cart_items", "products"
 end
