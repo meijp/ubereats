@@ -1,0 +1,1087 @@
+/*CSS Reset*/
+/*!
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+    TODO will need to remove settings on HTML since we can't namespace it.
+    TODO with the prefix, should I group by selector or property for weight savings?
+*/
+/* line 11, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+    TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+    TODO test putting a class on HEAD.
+        - Fails on FF.
+*/
+/* line 22, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 54, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+    TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+/* line 61, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 74, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 79, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+caption,
+th {
+  text-align: left;
+}
+
+/* line 83, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 92, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+q:before,
+q:after {
+  content: '';
+}
+
+/* line 96, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+/* line 102, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 105, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 108, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+/* line 116, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+/* line 122, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+/* line 126, /Users/mai/projects/uber-eats/app/assets/stylesheets/_reset.scss */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/*Style*/
+/* line 4, /Users/mai/projects/uber-eats/app/assets/stylesheets/carts.scss */
+#menu {
+  background-color: #F1F1F1;
+}
+
+/* line 8, /Users/mai/projects/uber-eats/app/assets/stylesheets/carts.scss */
+#menu .shopping-cart {
+  margin: 0;
+}
+
+/* line 12, /Users/mai/projects/uber-eats/app/assets/stylesheets/carts.scss */
+#menu .showcart {
+  display: flex;
+  padding: 20px;
+}
+
+/* line 17, /Users/mai/projects/uber-eats/app/assets/stylesheets/carts.scss */
+#menu .showcart .img {
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+/* line 27, /Users/mai/projects/uber-eats/app/assets/stylesheets/carts.scss */
+#menu .showcart .row {
+  padding: 20px;
+  margin: 20px;
+}
+
+/* line 32, /Users/mai/projects/uber-eats/app/assets/stylesheets/carts.scss */
+#menu .showcart .row h4 {
+  font-size: 20px;
+}
+
+/* line 1, /Users/mai/projects/uber-eats/app/assets/stylesheets/products.scss */
+#menu {
+  background-color: #F1F1F1;
+}
+
+/* line 5, /Users/mai/projects/uber-eats/app/assets/stylesheets/products.scss */
+#menu .item {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* line 13, /Users/mai/projects/uber-eats/app/assets/stylesheets/products.scss */
+#menu .item h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  border-bottom: solid;
+}
+
+/* line 20, /Users/mai/projects/uber-eats/app/assets/stylesheets/products.scss */
+#menu .item p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* line 25, /Users/mai/projects/uber-eats/app/assets/stylesheets/products.scss */
+#menu .item .img {
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 370px;
+  text-align: center;
+}
+
+/* line 35, /Users/mai/projects/uber-eats/app/assets/stylesheets/products.scss */
+#menu .item .itemtext {
+  margin-left: 30px;
+}
+
+/* line 1, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.results {
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+/* line 7, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.results h5 {
+  font-size: 23px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+/* line 13, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.result {
+  display: flex;
+}
+
+/* line 17, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.result .store {
+  width: calc(33.3% - 5px);
+  margin: 5px;
+}
+
+/* line 22, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.result .resultimg {
+  overflow: hidden;
+  height: 230px;
+  width: 250px;
+}
+
+/* line 28, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.result .resulttext {
+  width: 80%;
+}
+
+/* line 32, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.result p {
+  font-size: 13px;
+}
+
+/* line 36, /Users/mai/projects/uber-eats/app/assets/stylesheets/search.scss */
+.result p.genre {
+  color: #A9A9A9;
+}
+
+/* line 1, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+body, html {
+  height: 100%;
+  background-color: white;
+}
+
+/* line 6, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+h1, h2, h3, h4, h5, h6, p, body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #262626;
+}
+
+/* line 23, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.header {
+  background-image: url(/assets/nami-557f64ccbf491b0352467917b824ad2350419847f9cc9a2ffd7504b6eeccd185.jpg);
+  height: 40px;
+  position: relative;
+}
+
+/* line 30, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.header .ubertitle {
+  background-color: black;
+  height: 94px;
+  width: 94px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  left: 50%;
+  top: 20px;
+  text-align: center;
+  margin-left: -47px;
+}
+
+/* line 43, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.header h1 {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+}
+
+/* line 50, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.header h1 .logo {
+  color: #59BD5A;
+  font-weight: lighter;
+}
+
+/* line 55, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contents {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 64px;
+}
+
+/* line 61, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow {
+  width: 550px;
+  margin: 0 auto;
+}
+
+/* line 66, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow h2 {
+  font-weight: lighter;
+}
+
+/* line 70, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow .field {
+  padding-top: 20px;
+}
+
+/* line 74, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow .input {
+  font-size: 14px;
+  line-height: 24px;
+  height: 40px;
+  width: 95%;
+  padding: 20px 20px;
+}
+
+/* line 82, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow .submit {
+  background-color: #59BD5A;
+  color: white;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 3px;
+  line-height: 24px;
+  vertical-align: middle;
+  height: 40px;
+  width: 95%;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 99, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow .namefield {
+  display: flex;
+}
+
+/* line 103, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow .namefield .field {
+  width: 50%;
+}
+
+/* line 107, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.contentsrow .namefield .inputname {
+  height: 40px;
+  padding: 20px 60px 20px 20px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 114, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+/* line 128, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.footer p {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 136, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storeswrapper {
+  width: 100%;
+  background-color: #E5E5E4;
+}
+
+/* line 141, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.subwrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/* line 146, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesheader {
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  min-height: 74px;
+  max-height: 74px;
+  display: flex;
+}
+
+/* line 155, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesnav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 163, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesmain {
+  background-color: white;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 177, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesignup {
+  padding: 5%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 183, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesintro {
+  width: 60%;
+}
+
+/* line 187, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesintro p {
+  max-width: 500px;
+  font-size: 36px;
+}
+
+/* line 198, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry {
+  background-color: #F4F4F4;
+  width: 30%;
+  max-width: 300px;
+  margin: 23px;
+  padding: 23px;
+  border-top: 10px solid #e5e5e5;
+  position: absolute;
+  top: 140px;
+  right: 10%;
+}
+
+/* line 212, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry .field {
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* line 217, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry .input {
+  font-size: 10px;
+  height: 20px;
+  width: 230px;
+  padding: 10px;
+}
+
+/* line 224, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry .delitime {
+  display: flex;
+}
+
+/* line 228, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry .delitime .inputtime {
+  padding: 0;
+  font-size: 12px;
+}
+
+/* line 233, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry .inputtime {
+  font-size: 10px;
+  height: 20px;
+  width: 100px;
+  padding: 15px;
+}
+
+/* line 240, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.storesentry .submit {
+  background-color: #59BD5A;
+  color: white;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 3px;
+  line-height: 24px;
+  vertical-align: middle;
+  height: 30px;
+  width: 95%;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 269, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.srecommend {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* line 276, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.srecommend .spoint {
+  width: calc(33.3%);
+  margin: 20px;
+}
+
+/* line 281, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.srecommend .spoint h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* line 286, /Users/mai/projects/uber-eats/app/assets/stylesheets/stores.scss */
+.srecommend .spoint p {
+  font-size: 12px;
+}
+
+/* line 5, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top {
+  background-size: cover;
+  background-position: center center;
+  height: 364px;
+}
+
+/* line 12, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top .shop-into {
+  width: 80%;
+  height: 364px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 19, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top .shop-text {
+  background-color: white;
+  max-width: 400px;
+  padding: 32px;
+  margin-left: 60px;
+  border-radius: 4px;
+}
+
+/* line 27, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top .shop-name {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: lighter;
+  line-height: 48px;
+}
+
+/* line 34, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top .shop-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 39, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top ul {
+  display: flex;
+  align-items: center;
+}
+
+/* line 44, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top li {
+  padding-right: 20px;
+  font-size: 13px;
+  color: gray;
+}
+
+/* line 50, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top .open {
+  text-align: center;
+}
+
+/* line 54, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shop-top .open span {
+  background-color: black;
+  border-radius: 13px;
+  font-size: 13px;
+  color: white;
+  padding: 3px 20px;
+}
+
+/* line 64, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #contents {
+  display: flex;
+  padding: 40px 32px;
+  /*  flex-wrap: wrap;*/
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* line 72, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #sidebar {
+  width: 20%;
+  margin-right: 24px;
+  margin-top: 72px;
+}
+
+/* line 78, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shopinfo {
+  border: 1px solid #E0E0E0;
+  padding: 12px 20px;
+}
+
+/* line 83, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shopinfo h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* line 88, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .shopinfo p {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #757575;
+}
+
+/* line 95, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+/* line 105, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .cate {
+  width: 100%;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+/* line 112, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .item {
+  border: 1px solid #E0E0E0;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  flex: 0 1 auto;
+  display: flex;
+}
+
+/* line 122, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .itemtext {
+  padding: 16px 20px;
+}
+
+/* line 126, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .itemtext h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: lighter;
+}
+
+/* line 132, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .itemtext p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* line 137, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .itemtext span {
+  color: #757575;
+}
+
+/* line 141, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main #menus .img {
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 160px;
+}
+
+/* line 150, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .menu {
+  display: flex;
+  width: calc(50% - 24px);
+}
+
+/* line 155, /Users/mai/projects/uber-eats/app/assets/stylesheets/storetops.scss */
+main .menu a {
+  text-decoration: none;
+}
+
+/* line 1, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+#wrapper {
+  max-width: 1560px;
+  min-width: 769px;
+}
+
+/* line 6, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* line 11, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header #nav {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 17, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header #upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 22, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header h1 {
+  letter-spacing: 3.5px;
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+/* line 28, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header h1 .logo {
+  color: #59BD5A;
+}
+
+/* line 32, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* line 38, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header li {
+  list-style: none;
+  margin-left: 16px;
+}
+
+/* line 43, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header li a.btn {
+  border: 1px solid;
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* line 53, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header li a.signin {
+  background-color: white;
+  border-color: #E0E0E0;
+  color: black;
+}
+
+/* line 59, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header li a.login {
+  background-color: #262626;
+  border-color: black;
+  color: white;
+}
+
+/* line 65, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header #lower {
+  padding-top: 40px;
+}
+
+/* line 69, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header #lower p {
+  max-width: 425px;
+  font-size: 36px;
+  padding-bottom: 24px;
+}
+
+/* line 75, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header #lower .textarea {
+  width: 425px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #E0E0E0;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 24px 12px 48px;
+}
+
+/* line 85, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+header #lower .submit {
+  background-color: #59BD5A;
+  color: white;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 11px 20px;
+  margin-left: 16px;
+  min-width: 100px;
+}
+
+/* line 97, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main {
+  background-color: #F5F5F5;
+}
+
+/* line 101, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .recommend {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* line 108, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .recommend .point {
+  width: calc(30% - 10px);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  width: 220px;
+}
+
+/* line 116, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .recommend .pointimg {
+  width: 220px;
+}
+
+/* line 120, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .recommend .point h3 {
+  font-size: 28px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 127, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .sline {
+  border-top: 3px solid #E0E0E0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  width: 40px;
+}
+
+/* line 136, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .parallax {
+  background-image: url("ubereats-img.jpg");
+  /* Set a specific height */
+  min-height: 500px;
+  height: 50vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 150, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .ubereats-app {
+  width: 65%;
+}
+
+/* line 154, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .ubereats-app {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* line 159, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .left {
+  padding: 170px 0;
+}
+
+/* line 163, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .left .app-text h3 {
+  font-size: 36px;
+  font-weight: lighter;
+  min-width: 50%;
+  max-width: 90%;
+  line-height: 48px;
+}
+
+/* line 171, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .left .app-text p {
+  max-width: 400px;
+  padding: 10px 50px 40px 0;
+}
+
+/* line 176, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app-dl p {
+  font-size: 22px;
+}
+
+/* line 180, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app-dl ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 186, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app-dl li {
+  padding-right: 10px;
+}
+
+/* line 190, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 195, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app-list {
+  width: 50%;
+}
+
+/* line 199, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .right {
+  text-align: right;
+}
+
+/* line 203, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app-list .mobile-image {
+  background-image: url(phone.png);
+  width: 340px;
+  height: 654px;
+  transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  margin-top: -130px;
+}
+
+/* line 214, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+main .app-list .mobile-image .mobileimg2 {
+  position: absolute;
+  width: 276px;
+  top: 100px;
+  left: 31px;
+}
+
+/* line 222, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer {
+  background-color: #262626;
+  padding: 54px 42px 54px 64px;
+}
+
+/* line 227, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer h2 {
+  font-size: 29px;
+  letter-spacing: 3.5px;
+  color: white;
+}
+
+/* line 233, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer h2 .logo {
+  color: #59BD5A;
+}
+
+/* line 237, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .line {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid;
+  color: #E0E0E0;
+  opacity: 0.3;
+}
+
+/* line 246, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .info {
+  color: #DCDCDC;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10;
+  letter-spacing: 1px;
+}
+
+/* line 255, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .info ul {
+  width: calc(33.3% - 10px);
+}
+
+/* line 259, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .info li {
+  font-size: 13px;
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+/* line 265, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .dl {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 270, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .dl ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 274, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .dl li {
+  font-size: 14px;
+  color: #59BD5A;
+  list-style: none;
+  margin: 0 12px;
+}
+
+/* line 281, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .legal {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 286, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer .legal p {
+  display: flex;
+  color: #DCDCDC;
+  width: 33.3%;
+  font-size: 12px;
+}
+
+/* line 293, /Users/mai/projects/uber-eats/app/assets/stylesheets/tops.scss */
+footer a.store {
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  color: #DCDCDC;
+}
