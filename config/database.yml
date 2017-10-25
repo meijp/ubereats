@@ -17,6 +17,6 @@ test:
 production:
   <<: *default
   database: ubereats_production
-  username: ubereats
+  username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
