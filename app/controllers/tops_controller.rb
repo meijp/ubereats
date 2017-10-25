@@ -3,6 +3,7 @@ class TopsController < ApplicationController
     # @store = Store.all
     # @stores = Store.where('address LIKE(?)', "%#{params[:address]}%")
     # @user = User.all
+    @cart = current_cart
   end
 
 

@@ -1,6 +1,11 @@
-<header class="storesheader">
-    <div class="storesnav">
-      <h1>UBER <span class="logo">EATS</span></h1>
+<header class="uberheader">
+    <div class="ubernav">
+
+    <div class="navbtn">
+      <h1><%= link_to root_path, :method => :get do %>UBER <span class="logo">EATS</span><% end %></h1>
+    </div>
+
+    <div class="navbtn">
       <% if user_signed_in? %>
         <ul>
           <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
@@ -18,5 +23,16 @@
           <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
         </ul>
       <% end %>
+
+      <% if current_cart.id.blank? %>
+        <ul>
+          <li><%= link_to cart_items_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to cart_path(current_cart), :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+        </ul>
+      <% end %>
     </div>
+  </div>
 </header>
