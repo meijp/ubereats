@@ -1,5 +1,5 @@
 <header class="uberheader">
-    <div class="ubernav">
+  <div class="ubernav">
 
     <div class="navbtn">
       <h1><%= link_to root_path, :method => :get do %>UBER <span class="logo">EATS</span><% end %></h1>
@@ -24,9 +24,10 @@
         </ul>
       <% end %>
 
+
       <% if current_cart.id.blank? %>
         <ul>
-          <li><%= link_to cart_items_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+          <li><%= link_to new_cart_item_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
         </ul>
       <% else %>
         <ul>
@@ -34,5 +35,6 @@
         </ul>
       <% end %>
     </div>
+
   </div>
 </header>

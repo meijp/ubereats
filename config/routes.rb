@@ -22,7 +22,13 @@ Rails.application.routes.draw do
     # post '/update_item' => 'carts#update_item'
     # delete '/delete_item' => 'carts#delete_item'
 
-    resources :cart_items, only: [:create, :update, :destroy]
+
+    resources :cart_items, only: [:create, :update, :destroy, :new]
+    resources :payments, only: [:index, :new, :update, :create] do
+      collection do
+        post 'purchase'
+      end
+    end
 
   resources :tops do
     collection do

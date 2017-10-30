@@ -2,27 +2,73 @@
 <!-- /header -->
 
 <div id="menu">
+  <div class="gmap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.1297807242436!2d139.71021071525854!3d35.67380628019605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c97f6dd67d7%3A0xe184b8742152e68!2zUMOEUkxBIFBBUkxBIOODkeODvOODqQ!5e0!3m2!1sja!2sjp!4v1507521479865" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
   <div class="shopping-cart">
+
     <% if !@cart_item.nil? && @cart_item.errors.any? %>
-      <div class="alert alert-danger">
-        <ul>
-        <% @cart_item.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+      <ul>
+      <% @cart_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
     <% end %>
+
     <% if @cart_items.size == 0 %>
-      <p class="text-center">
-        There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
-      </p>
+      <p>There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.</p>
     <% else %>
+
+    <div class="upper">
+      <div class="cart-info">
+        <% num = 0 %>
+        <% @cart_items.each do |cart_item| %>
+          <% if num == 0 %>
+            <div class="cart-img" style="background-image: url('<%= cart_item.store.image %>')">
+              <div class="shop-info">
+                <p class="ordertitle">ご注文内容</p>
+                <p class="shop-name"><%= cart_item.store.name %></p>
+                <p class="open"><%= cart_item.store.mindelitime %> - <%= cart_item.store.maxdelitime %> min</p>
+              </div>
+            </div>
+          <% end %>
+          <% num += 1 %>
+        <% end %>
+      </div>
+    </div>
+
+<!--     <div class="shopping-store">
+      <%# @cart_items.each do |cart_item| %>
+        <div class="shopping-storeimg" style="background-image: url('<%#= cart_item.store.image %>')">
+          <h3><%#= cart_item.store.name %></h3>
+        </div>
+      <%# end %>
+    </div> -->
+    <div class="lower">
       <% @cart_items.each do |cart_item| %>
         <%= render 'carts/cart_row', product: cart_item.product, cart_item: cart_item, show_total: true %>
       <% end %>
-    <% end %>
-  </div>
-</div>
 
-<%= render 'tops/footer'%>
+      <div class="cost">
+        <p>Delivery Fee</p>
+        <p class="price">¥<%= @cart.shipping %></p>
+      </div>
+      <div class="cost">
+        <p>Total</p>
+        <p class="price">¥<%= @cart.total %></p>
+      </div>
+
+      <% if user_signed_in? %>
+        <%= link_to '注文する', new_payment_path, class: 'btn btn-warning' %>
+      <% else %>
+        <%= link_to '注文する', new_user_session_path %>
+      <% end %>
+    </div> <!-- lower end -->
+
+    <% end %>
+  </div> <!-- shopping-cart end -->
+</div> <!-- menu end -->
+
+<%= render 'tops/footer' %>
 <!-- /footer -->

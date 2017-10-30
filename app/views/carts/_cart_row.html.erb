@@ -1,24 +1,35 @@
 <div class="showcart">
 
-  <div class="up">
-    <div class="img" style="background-image: url('<%= product.image.url %>')"></div>
-  </div>
+<!--     <div class="up">
+      <div class="img" style="background-image: url('<%= product.image.url %>')"></div>
+    </div> -->
 
-  <div class="row">
-    <h4><%= product.name %></h4>
-    <%= form_for cart_item, remote: true do |f| %>
-      <h5 class="text-right">Unit Price: <span style="color: green">¥<%= cart_item.unit_price %></span></h5>
+    <div class="up">
+      <h4><%= product.name %></h4>
+      <%= form_for cart_item, remote: true do |f| %>
 
-      <%= f.number_field :quantity, value: cart_item.quantity.to_i, class: "form-control", min: 1 %>
-      <%= f.hidden_field :product_id, value: product.id %>
 
-      <div class="btn-group">
-        <%= f.submit "数量を変更する", class: "btn btn-primary" %>
-        <%= link_to "Delete", cart_item, { data: { confirm: "Are you sure you wish to delete the product '#{cart_item.product.name}' from your cart?" }, method: :delete, class: "btn btn-danger" } %>
+<!--       <div class="cost">
+        <p>Unit Price:</p>
+        <p class="price">¥<%= cart_item.unit_price %></p>
+      </div> -->
+      <div class="cost">
+        <p><%= f.number_field :quantity, value: cart_item.quantity.to_i, class: "form-control", min: 1 %></p>
+        <p><%= f.submit "数量を変更する", class: "btn btn-primary" %></p>
+
+        <%= f.hidden_field :product_id, value: product.id %>
+        <%= f.hidden_field :store_id, value: product.store_id %>
       </div>
 
-      <h5 class="text-right">Subtotal Price: <span style="color: green">¥<%= cart_item.total_price %></span></h5>
-    <% end %>
-  </div>
+      <div class="cost">
+        <p>Subtotal Price: </p>
+        <p class="price">¥<%= cart_item.total_price %></p>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <label for="trigger"><%= link_to "✖", cart_item, { data: { confirm: "Are you sure you wish to delete the product '#{cart_item.product.name}' from your cart?" }, method: :delete, class: "delete" } %></label>
+    </div>
 
 </div>

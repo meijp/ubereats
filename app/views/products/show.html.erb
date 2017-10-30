@@ -26,6 +26,7 @@
           <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
           <div class="input-group-btn">
             <%= f.hidden_field :product_id, value: @product.id %>
+            <%= f.hidden_field :store_id, value: @product.store_id %>
             <%= f.submit "Add to Cart", class: "btn btn-primary" %>
           </div>
         </div>

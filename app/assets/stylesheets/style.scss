@@ -18,7 +18,6 @@ body {
   background-image: image-url("/images/nami.jpg");
   height: 40px;
   position: relative;
-
 }
 
 .header .ubertitle {
@@ -106,8 +105,7 @@ body {
 }
 
 .footer {
-  background-color: black;
-  color: white;
+  background-color: #262626;
   width: 100%;
   height: 64px;
   position:fixed;
@@ -116,7 +114,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-
 }
 
 .footer p {
@@ -125,18 +122,5 @@ body {
   align-items: center;
 }
 
-// .footer-signup {
-//   width: 100%;
-//   height: auto;
-//   background-color: black;
-//   color: white;
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 15px 50px;
-// }
-
-// .footer-signup p {
-//   font-size: 12px;
-// }
 
 
