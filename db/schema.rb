@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030091312) do
+ActiveRecord::Schema.define(version: 20171030131436) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "quantity",    limit: 4
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 20171030091312) do
     t.integer  "cart_id",          limit: 4
     t.integer  "shipping",         limit: 4
     t.integer  "amount",           limit: 4
-    t.text     "delivery_address", limit: 65535
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "delivery_address", limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -80,6 +80,9 @@ ActiveRecord::Schema.define(version: 20171030091312) do
     t.integer  "maxdelitime",            limit: 4
     t.time     "opentime"
     t.time     "closetime"
+    t.string   "en_name",                limit: 255
+    t.float    "latitude",               limit: 24
+    t.float    "longitude",              limit: 24
   end
 
   add_index "stores", ["email"], name: "index_stores_on_email", unique: true, using: :btree
