@@ -19,6 +19,11 @@
   margin: 5px;
 }
 
+.result .store a {
+  text-decoration: none;
+  color: black;
+}
+
 .result .resultimg {
   overflow: hidden;
   height: 230px;
@@ -36,3 +41,32 @@
 .result p.genre{
   color: #A9A9A9;
 }
+
+
+// 共通header
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.uberheader {
+  width: 100%;
+  background-color: white;
+  padding: 0;
+}
+
+.ubernav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 74px;
+  max-height: 74px;
+}
+
+.navbtn {
+  display: flex;
+}
+
+

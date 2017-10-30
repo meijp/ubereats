@@ -1,0 +1,51 @@
+<%= render 'tops/header' %>
+<!-- /header -->
+
+<main>
+  <h2>決済のお手続き</h2>
+  <div class="row">
+    <%= form_tag(action: :purchase, method: :post) do %>
+      <h3>購入者情報</h3>
+      <%= hidden_field_tag :cart_id, @cart.id %>
+      <%= hidden_field_tag :store_id, @cart_store %>
+
+      <div class="field">
+        <%= @user.lastname %> <%= @user.firstname %>
+        <%= hidden_field_tag :user_id, @user.id %>
+      </div>
+
+      <div class="field">
+       <p>お届け先の住所を入力してください</p>
+        <%= text_field_tag :delivery_address %>
+      </div>
+
+      <div class="field">
+        <h3>お支払い</h3>
+          <p>小計</p>
+          <p><%= @cart.subtotal %></p>
+          <p>送料</p>
+          <p><%= @cart.shipping %><%= hidden_field_tag :shipping, @cart.shipping %></p>
+          <p>合計</p>
+          <p><%= @cart.total %><%= hidden_field_tag :amount,@cart.total %></p>
+      </div>
+
+  <%#= form_tag(action: :pay, method: :post) do %>
+  <!--   <script class="payjp-button" data-key="<%= PAYJP_PUBLIC_KEY %>" src="https://checkout.pay.jp" type="text/javascript"></script> -->
+  <%# end %>
+
+
+  <script type="text/javascript" class="payjp-button" data-key="<%= PAYJP_PUBLIC_KEY %>" src="https://checkout.pay.jp" ></script>
+  <%= hidden_field_tag :amount, @cart.total %>
+
+<% end %>
+
+
+
+    <br>
+    <div>
+      <%= link_to "トップへ", root_path %>
+    </div>
+</main>
+
+<%= render 'tops/footer' %>
+<!-- /footer -->

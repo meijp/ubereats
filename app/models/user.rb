@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :tel, presence: true, uniqueness: true
 
-  has_many :stores
-  has_many :carts
+  # has_many :stores
+  has_many :payments
 
 end

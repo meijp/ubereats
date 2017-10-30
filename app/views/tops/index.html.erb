@@ -3,20 +3,40 @@
   <header>
     <div id="nav">
       <div id="upper">
-        <h1>UBER <span class="logo">EATS</span></h1>
-        <% if user_signed_in? %>
-          <ul>
-            <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
-          </ul>
-        <% else %>
-          <ul>
-            <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
-            <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
-            <li><%#= link_to cart_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><%# end %></li>
-          </ul>
-        <% end %>
+        <div class="navbtn">
+          <h1>UBER <span class="logo">EATS</span></h1>
+        </div>
+        <div class="navbtn">
+          <% if user_signed_in? %>
+            <ul>
+              <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
+            </ul>
+          <% elsif store_signed_in? %>
+            <ul>
+              <li><%= link_to "商品登録", new_store_product_path(current_store), class: 'btn signin'%></li>
+              <li><%= link_to "店舗情報編集", edit_store_registration_path(@store), class: 'btn signin'%></li>
+              <li><%= link_to "ログアウト", destroy_store_session_path, method: :delete, class: 'btn login'%></li>
+            </ul>
+          <% else %>
+            <ul>
+              <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
+              <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
+            </ul>
+          <% end %>
+
+          <% if current_cart.id.blank? %>
+            <ul>
+              <li><%= link_to new_cart_item_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+            </ul>
+          <% else %>
+            <ul>
+              <li><%= link_to cart_path(current_cart), :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+            </ul>
+          <% end %>
+        </div>
       </div>
+
       <div id="lower">
         <p>配達に対応するお近くのレストランを検索しましょう</p>
  <!--        <form>
@@ -24,7 +44,7 @@
           <input class="submit" type="submit" value="検索">
         </form> -->
 <%= form_tag search_tops_path, :method => 'get' do %>
-<%= text_field_tag :search, params[:search], class: "textarea", placeholder: '配達先の住所を入力してください' %>
+<%= text_field_tag :search, params[:search], class: "textarea", placeholder: '配達先の住所を入力してください　(例：渋谷)' %>
 <%= submit_tag "Search", :name => nil, class: "submit" %>
 <% end %>
 

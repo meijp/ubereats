@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171023073016) do
+ActiveRecord::Schema.define(version: 20171028040607) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "quantity",    limit: 4
@@ -21,17 +21,29 @@ ActiveRecord::Schema.define(version: 20171023073016) do
     t.integer  "cart_id",     limit: 4
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "store_id",    limit: 4
   end
 
   add_index "cart_items", ["cart_id"], name: "index_cart_items_on_cart_id", using: :btree
   add_index "cart_items", ["product_id"], name: "index_cart_items_on_product_id", using: :btree
 
   create_table "carts", force: :cascade do |t|
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "subtotal",   limit: 4
-    t.integer  "shipping",   limit: 4
+    t.integer  "shipping",   limit: 4, default: 380
     t.integer  "total",      limit: 4
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "user_id",          limit: 4
+    t.integer  "store_id",         limit: 4
+    t.integer  "cart_id",          limit: 4
+    t.integer  "shipping",         limit: 4
+    t.integer  "amount",           limit: 4
+    t.integer  "delivery_address", limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "products", force: :cascade do |t|
