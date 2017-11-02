@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin-bottom: 10px;
 }
 
-
+// youtube ↓↓↓↓↓↓↓
 #youtube {
   position: relative;
 }
@@ -285,12 +285,12 @@ h1, h2, h3, h4, h5, h6, p, body {
   color: green;
 }
 
-
+// store recommend　 ↓↓↓↓↓↓↓
 .srecommend {
   display: flex;
   width: 90%;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 5% 5%;
 }
 
 .srecommend .spoint {
@@ -304,5 +304,36 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .srecommend .spoint p {
-  font-size: 12px;
+  font-size: 15px;
 }
+
+// slideshow　 ↓↓↓↓↓↓↓
+.sslide .mySlides {
+  position: relative;
+}
+
+.sslide .mySlides .slideimg {
+  text-align: right;
+  max-height:646px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.sslide .mySlides .quote {
+  position: absolute;
+  background-color: white;
+  padding: 100px 50px;
+  top: 20%;
+  right: 50%;
+}
+
+.sslide .mySlides .quote .comment{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sslide .mySlides .quote p span{
+  font-size: 13px;
+  color: gray;
+}
+

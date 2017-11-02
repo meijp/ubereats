@@ -16,7 +16,7 @@
 
       <div class="storesintro">
         <p>デリバリーを通して、<br/>お店の「美味しい」をお届けします。</p>
-      </div>
+      </div> <!-- storesintro end -->
 
       <div class="storesentry">
         <h2>UberEATS に出店しませんか</h2>
@@ -89,51 +89,81 @@
             <%= f.submit "送信", class: "submit" %>
           </div>
         <% end %>
-      </div>
-    </div>
+      </div> <!-- storesentry end -->
+    </div> <!-- storesmain end -->
 
 
-  <div id="youtube">
-    <div id="ytvideo" style="display:none;"></div>
-    <div id="ytimg">
-      <img src="/images/canters-deli.jpg" class="ytimg">
+    <div id="youtube">
+      <div id="ytvideo" style="display:none;"></div>
+      <div id="ytimg">
+        <img src="/images/canters-deli.jpg" class="ytimg">
 
-       <div class="youtubeicon">
-        <div class="banner">
-          <div class="bannername">マーク キャンター</div>
-          <div class="bannerrestaurant"><em>キャンターズ デリ</em>、ロサンゼルス</div>
+         <div class="youtubeicon">
+          <div class="banner">
+            <div class="bannername">マーク キャンター</div>
+            <div class="bannerrestaurant"><em>キャンターズ デリ</em>、ロサンゼルス</div>
+          </div>
+          <div class="play">
+            <i class="fa fa-play fa-4x" aria-hidden="true"></i>
+          </div>
         </div>
-        <div class="play">
-          <i class="fa fa-play fa-4x" aria-hidden="true"></i>
-        </div>
       </div>
-    </div>
-  </div>
+    </div> <!-- youtube end -->
 
-
-    <div>
-      <div class="srecommend">
-        <div class="spoint">
+    <div class="srecommend">
+      <div class="spoint">
         <div class="sline"></div>
           <h3>お店に無理のない形で、店舗収益アップ</h3>
           <p>自慢のお料理を、さらに多くのお客様にお届けしませんか? UberEATS を使えば、フードデリバリーを通してより多くの方々にお食事を提供することできます。また、混雑時にも柔軟な対応が可能なため、無理のない形で売上を向上することができます。</p>
-        </div>
-        <div class="spoint">
-          <div class="sline"></div>
-          <h3>出来立てを、効率的に素早くお届け</h3>
-          <p>ご注文の受け付け、配達、支払い処理等、デリバリーの面倒事は UberEATS が引き受けます。レストラン様には、美味しいお食事の調理に専念していただけます。どこよりも簡単、効率的にお食事を届けられるプラットフォーム。それが UberEATS です。</p>
-        </div>
-        <div class="spoint">
-          <div class="sline"></div>
-          <h3>どんな時でも、安心のサポート</h3>
-          <p>UberEATSでは、レストランをサポートするために、初期設定、メニューのプロモーション、配達時間の効率化などを一手に担います。できたての状態で、丁寧にお食事をお届けします。万が一の際にも、電話を通していつでも連絡を取ることができます。それ以上のサポートにも、いつでも対応いたします。</p>
-        </div>
-
       </div>
-    </div>
+      <div class="spoint">
+        <div class="sline"></div>
+        <h3>出来立てを、効率的に素早くお届け</h3>
+        <p>ご注文の受け付け、配達、支払い処理等、デリバリーの面倒事は UberEATS が引き受けます。レストラン様には、美味しいお食事の調理に専念していただけます。どこよりも簡単、効率的にお食事を届けられるプラットフォーム。それが UberEATS です。</p>
+      </div>
+      <div class="spoint">
+        <div class="sline"></div>
+        <h3>どんな時でも、安心のサポート</h3>
+        <p>UberEATSでは、レストランをサポートするために、初期設定、メニューのプロモーション、配達時間の効率化などを一手に担います。できたての状態で、丁寧にお食事をお届けします。万が一の際にも、電話を通していつでも連絡を取ることができます。それ以上のサポートにも、いつでも対応いたします。</p>
+      </div>
+    </div> <!-- srecommend end -->
 
-  </main>
+    <div class="sslide">
+      <div class="mySlides">
+        <div class="quote">
+          <p class="comment">「UberEATSを通してデリバリーを始めたおかげで、事業が成長しました。本当に売上が増えたんです。」</p>
+          <p><span>マーク キャンター　Canter's Deli, オーナー</span></p>
+        </div>
+        <div class="slideimg">
+          <img src="/images/marc-canter.jpg" style="width:60%;">
+        </div>
+      </div>
 
+      <div class="mySlides">
+        <div class="quote">
+          <p class="comment">「初めはUberEATSが物流さえわかっていれば、それでいいと思っていたんだ。でも、彼らとの付き合いが深まっていくに連れて、『UberEATSが本当にレストランのことを考えてくれている』と感じられた。食事の品質・私の経験・オペレーションの流れまで含め、理解してくれることを私は本当に嬉しく思ってる。」</p>
+          <p><span>エリック グリーンスパン　Mare, オーナーシェフ</span></p>
+        </div>
+        <div class="slideimg">
+          <img src="/images/eric-greenspan.jpg" style="width:60%;">
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <div class="quote">
+          <p class="comment">「UberEATS は様々なデータやフィードバックを提供してくれます。お店側で変更点が出た場合も柔軟に対応してくれますし、お互い本音でやり取りができるので改善もしやすい環境です。」</p>
+          <p><span>アマリット ドゥリアパイブル</span></p>
+          <p><span>Lettuce Entertain You, ゼネラルマネージャー</span></p>
+        </div>
+        <div class="slideimg">
+          <img src="/images/amarit-dulyapaibul.jpg" style="width:60%;">
+        </div>
+      </div>
+    </div> <!-- sslide end -->
+
+  </main> <!-- storesmain end -->
+
+</div> <!-- subwrapper end -->
 
   <footer>
     <div class="footer-logo">
