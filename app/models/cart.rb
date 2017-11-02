@@ -1,5 +1,6 @@
 class Cart < ActiveRecord::Base
   has_many :cart_items
+  has_many :stores, through: :cart_items
   has_many :payments
 
   before_save :update_subtotal

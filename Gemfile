@@ -15,6 +15,8 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'payjp'
+gem "gmaps4rails"
+gem "geocoder"
 
 group :development, :test do
   gem 'byebug'
