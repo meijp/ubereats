@@ -207,6 +207,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   top: 140px;
   // right: 40px;
   right: 10%;
+  z-index: 10;
 }
 
 .storesentry .field {
@@ -254,17 +255,36 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin-bottom: 10px;
 }
 
-.youtube {
-  // background-image: url(https://storage.googleapis.com/ubereats/restaurants/us/canters-deli.jpg);
-  // background-repeat: no-repeat;
-  // background-size: 110%;
+
+#youtube {
+  position: relative;
 }
 
-  // width: 400px;
-  // padding: 32px;
-  // position: relative;
-  // top: -150px;
-  // right: 40px;
+#youtube .ytimg{
+  width: 100%;
+}
+
+#youtube .youtubeicon{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  z-index: 10;
+  color: white;
+  display: flex;
+}
+
+#youtube .youtubeicon .banner {
+  padding-right: 30px;
+}
+
+#youtube .youtubeicon .bannername {
+  font-size: 30px;
+}
+
+#youtube .youtubeicon .play i:hover{
+  color: green;
+}
+
 
 .srecommend {
   display: flex;
