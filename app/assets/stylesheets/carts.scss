@@ -4,20 +4,12 @@
   display: flex
 }
 
-#menu .gmap {
+#menu #gmap {
   position: relative;
   width: calc(100% - 380px);   /* 左右に余白が必要なら値を変更してもOK */
   height: 0;
-  padding-bottom: 56.25%;    /* padding-topでもOK */
+  padding-bottom: 65%;    /* padding-bottom: 56.25% padding-topでもOK */
   overflow: hidden;
-}
-
-#menu .gmap iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;    /* 必要であれば!importantを付けてください */
-  height: 100%;    /* 必要であれば!importantを付けてください */
 }
 
 #menu .shopping-cart {

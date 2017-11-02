@@ -2,11 +2,10 @@
 <!-- /header -->
 
 <main>
-<%# <% @stores.each do |store| %>
   <div class="shop-top" style="background-image: url('<%= @store.image %>')">
     <div class="shop-into">
       <div class="shop-text">
-        <p class="shop-name"><%= @store.name %><br/>PARLA Gaienmae</p>
+        <p class="shop-name"><%= @store.name %><br/><%= @store.en_name %></p>
         <div class="shop-type">
           <ul>
             <li><%= @store.genre %></li>
@@ -16,21 +15,20 @@
       </div>
     </div>
   </div>
-<%# <% end %>
 
   <div id="contents">
     <div id="sidebar">
       <div class="shopinfo">
         <h4><%= @store.name %> のメニュー</h4>
-        <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= @store.opentime.to_formatted_s(:without_second) %> - <%= @store.closetime %></p>
+        <p><i class="fa fa-clock-o" aria-hidden="true"></i> <%= @store.opentime.hour %>時 - <%= @store.closetime.hour %>時</p>
         <p>メイン Main</p>
       </div>
     </div>
 
     <div id="menus">
       <div class="cate">メイン Main</div>
-      <% @products.each do |product| %>
 
+      <% @products.each do |product| %>
         <div class="menu">
         <%= link_to product_path(product.id) do %>
 

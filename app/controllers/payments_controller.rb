@@ -20,7 +20,10 @@ class PaymentsController < ApplicationController
     Payment.create(payment_params)
     Payjp.api_key = PAYJP_SECRET_KEY
     Payjp::Charge.create(currency: 'jpy', amount: params[:amount], card: params['payjp-token'])
-    redirect_to root_path, notice: "支払いが完了しました"
+
+    session[:cart_id] = nil
+    flash[:notice] = "支払いが完了しました。"
+    redirect_to root_path
   end
 
   private

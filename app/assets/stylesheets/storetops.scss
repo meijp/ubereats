@@ -1,7 +1,3 @@
-main {
-  // padding-top: 74px;
-}
-
 main .shop-top {
  // background-image: url("parla_top.png");
  background-size:cover;
@@ -18,7 +14,7 @@ main .shop-top .shop-into {
 
 main .shop-top .shop-text {
   background-color: white;
-  max-width: 400px;
+  max-width: 500px;
   padding: 32px;
   margin-left: 60px;
   border-radius: 4px;
@@ -115,12 +111,12 @@ main #menus .item {
   margin-bottom: 24px;
   margin-right: 24px;
   flex: 0 1 auto;
-
   display: flex;
 }
 
 main #menus .itemtext {
   padding: 16px 20px;
+  width: 80%;
 }
 
 main #menus .itemtext h5 {
@@ -154,16 +150,9 @@ main .menu {
 
 main .menu a {
   text-decoration: none;
+  color: black;
 }
 
-// modalwindow
-
-
-
-
-
-
-
-
-
-
+main .menu a:visited {
+  color: black;
+}

@@ -19,7 +19,7 @@
 <!-- 変更後 -->
       <%#= form_for @item, url: add_item_path, method: :post do |f| %>
 
-      <%= form_for @item do |f| %>
+      <%= form_for @cart_item do |f| %>
       <h4 class="text-right">Unit Price: <span style="color: green">
       <%= f.hidden_field :unit_price, value: @product.price %>¥<%= @product.price %></span></h4>
         <div class="input-group">
@@ -27,8 +27,10 @@
           <div class="input-group-btn">
             <%= f.hidden_field :product_id, value: @product.id %>
             <%= f.hidden_field :store_id, value: @product.store_id %>
+
             <%= f.submit "Add to Cart", class: "btn btn-primary" %>
           </div>
+
         </div>
       <% end %>
 

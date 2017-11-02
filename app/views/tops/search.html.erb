@@ -10,7 +10,7 @@
           <%= link_to store_storetops_path(store.id) do %>
             <%= image_tag(store.image, class: 'resultimg') %>
             <div class="resulttext">
-              <h3><%= store.name %></h3>
+              <h3><%= store.name %><%= store.en_name %></h3>
               <p class="genre">・<%= store.genre %></p>
               <p><%= store.mindelitime %> - <%= store.maxdelitime %>Min</p>
             </div>
