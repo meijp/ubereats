@@ -2,7 +2,7 @@
 lock "3.10.0"
 
 set :application, 'uber-eats'
-set :repo_url, 'git@github.com:meijp/uber-eats.git'
+set :repo_url, 'git@github.com:meijp/ubereats.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
