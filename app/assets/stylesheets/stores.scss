@@ -161,17 +161,9 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .storesmain {
-  // padding-top: 74px;
   background-color: white;
   padding: 0;
   width: 100%;
-  // position: absolute;
-    // position: absolute;
-    // top: 140px;
-    // right: 40px;
-
-    // margin: 0;
-  // position: absolute;
 }
 
 .storesignup {
@@ -189,12 +181,6 @@ h1, h2, h3, h4, h5, h6, p, body {
   font-size: 36px;
 }
 
-// .storesmainupper p {
-//   width: 60%;
-//   font-size: 36px;
-//   padding-bottom: 24px;
-// }
-
 .storesentry {
   background-color: #F4F4F4;
   width: 30%;
@@ -207,6 +193,7 @@ h1, h2, h3, h4, h5, h6, p, body {
   top: 140px;
   // right: 40px;
   right: 10%;
+  z-index: 10;
 }
 
 .storesentry .field {
@@ -254,23 +241,42 @@ h1, h2, h3, h4, h5, h6, p, body {
   margin-bottom: 10px;
 }
 
-.youtube {
-  // background-image: url(https://storage.googleapis.com/ubereats/restaurants/us/canters-deli.jpg);
-  // background-repeat: no-repeat;
-  // background-size: 110%;
+// youtube ↓↓↓↓↓↓↓
+#youtube {
+  position: relative;
 }
 
-  // width: 400px;
-  // padding: 32px;
-  // position: relative;
-  // top: -150px;
-  // right: 40px;
+#youtube .ytimg{
+  width: 100%;
+}
 
+#youtube .youtubeicon{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  z-index: 10;
+  color: white;
+  display: flex;
+}
+
+#youtube .youtubeicon .banner {
+  padding-right: 30px;
+}
+
+#youtube .youtubeicon .bannername {
+  font-size: 30px;
+}
+
+#youtube .youtubeicon .play i:hover{
+  color: green;
+}
+
+// store recommend　 ↓↓↓↓↓↓↓
 .srecommend {
   display: flex;
   width: 90%;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 5% 5%;
 }
 
 .srecommend .spoint {
@@ -284,5 +290,36 @@ h1, h2, h3, h4, h5, h6, p, body {
 }
 
 .srecommend .spoint p {
-  font-size: 12px;
+  font-size: 15px;
 }
+
+// slideshow　 ↓↓↓↓↓↓↓
+.sslide .mySlides {
+  position: relative;
+}
+
+.sslide .mySlides .slideimg {
+  text-align: right;
+  max-height:646px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.sslide .mySlides .quote {
+  position: absolute;
+  background-color: white;
+  padding: 100px 50px;
+  top: 20%;
+  right: 50%;
+}
+
+.sslide .mySlides .quote .comment{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sslide .mySlides .quote p span{
+  font-size: 13px;
+  color: gray;
+}
+
