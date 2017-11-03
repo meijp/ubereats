@@ -25,7 +25,11 @@
             <%= devise_error_messages! %>
 
             <div class="field">
-              <%= f.text_field :name, placeholder: '飲食店名', class: "input"%>
+              <%= f.text_field :name, placeholder: '飲食店名 (JP)', class: "input"%>
+            </div>
+
+            <div class="field">
+              <%= f.text_field :en_name, placeholder: '飲食店名 (EN)', class: "input"%>
             </div>
 
             <div class="field">

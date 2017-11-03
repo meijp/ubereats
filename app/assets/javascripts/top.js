@@ -20,7 +20,6 @@ window.onload = function(){
   }
 
 
-
   var myIndex = 0;
   carousel();
 
