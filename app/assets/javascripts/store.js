@@ -3,8 +3,8 @@ $(document).on('click','#ytimg',function(e){
     $('#ytvideo').html('<iframe width="100%" height="500" src="https://www.youtube.com/embed/qSi6TaXRhdc?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>').show();
 });
 
-
-window.onload = function(){
+  $(document).on('turbolinks:load', function() {
+  console.log("store");
   var myIndex = 0;
   carousel();
 
@@ -19,4 +19,4 @@ window.onload = function(){
       x[myIndex-1].style.display = "block";
       setTimeout(carousel, 7000); // Change image every 7 seconds
   }
-}
+});
