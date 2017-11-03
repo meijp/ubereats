@@ -20,7 +20,7 @@ class StoretopsController < ApplicationController
 
   private
     def storetop_params
-      params.require(:storetop).permit(:name, :genre, :mindelitime, :maxdelitime, :image)
+      params.require(:storetop).permit(:name, :en_name, :genre, :mindelitime, :maxdelitime, :image)
     end
 
 end

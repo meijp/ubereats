@@ -12,23 +12,16 @@ class ApplicationController < ActionController::Base
     end
 
     devise_parameter_sanitizer.permit(:sign_up) do |store_params|
-      store_params.permit(:name, :email, :tel, :address, :genre, :image, :mindelitime, :maxdelitime, :opentime, :closetime, :password, :password_confirmation)
+      store_params.permit(:name, :en_name, :email, :tel, :address, :genre, :image, :mindelitime, :maxdelitime, :opentime, :closetime, :password, :password_confirmation)
     end
     devise_parameter_sanitizer.permit(:sign_in) do |store_params|
       store_params.permit(:email, :password, :remember_me)
     end
+    devise_parameter_sanitizer.permit(:account_update) do |store_params|
+      store_params.permit(:name, :en_name, :email, :tel, :address, :genre, :image, :mindelitime, :maxdelitime, :opentime, :closetime, :password, :password_confirmation, :current_password)
+    end
   end
 
-# for cart
-  # helper_method :current_cart
-  # def current_cart
-  #   if session[:cart_id]
-  #     @cart = Cart.find(session[:cart_id])
-  #   else
-  #     @cart = Cart.create
-  #     session[:cart_id] = @cart.id
-  #   end
-  # end
 
   helper_method :current_cart
   def current_cart
@@ -40,9 +33,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-    # store_storetops_path(resource)
-    # tops_path #your path
-
   # ログイン後のリダイレクト先
   def after_sign_in_path_for(resource)
     case resource
