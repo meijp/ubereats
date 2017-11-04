@@ -17,23 +17,21 @@ Rails.application.routes.draw do
     resources :products, shallow: true
   end
 
-    resources :carts, only: [:show, :destroy]
-    # post '/add_item' => 'carts#add_item'
-    # post '/update_item' => 'carts#update_item'
-    # delete '/delete_item' => 'carts#delete_item'
+  resources :carts, only: [:show]
+  resources :cart_items, only: [:create, :update, :destroy, :new]
 
-
-    resources :cart_items, only: [:create, :update, :destroy, :new]
-    resources :payments, only: [:index, :new, :update, :create] do
-      collection do
-        post 'purchase'
-      end
+  resources :payments, only: [:index, :new, :update, :create] do
+    collection do
+      post 'purchase'
     end
+  end
 
   resources :tops do
     collection do
       get 'search'
     end
   end
+
+  #resources :company
 
 end
