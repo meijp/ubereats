@@ -17,25 +17,31 @@
 
   <div id="topslideshow">
     <div class="slideshow-container">
-      <div class="topSlides fade">
-        <div class="numbertext">
-          <p>Uber で</p>
-          <p>パーラ 外苑前<br/>PARLA Gaienmae</p>
-          <p><span>Tokyoの人気店の料理をすぐにお届け</span></p>
-        </div>
-        <img src="/images/parla.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
 
-      <div class="topSlides fade">
-        <div class="numbertext">
-          <p>Uber で</p>
-          <p>グラニースミス アップルパイ アンド コーヒー<br/>GRANNY SMITH APPLE PIE &amp; COFFEE</p>
-          <p><span>Tokyoの人気店の料理をすぐにお届け</span></p>
+
+      <%= link_to store_storetops_path(@store1) do%>
+        <div class="topSlides fade">
+          <div class="numbertext">
+            <p>Uber で</p>
+            <p>パーラ 外苑前<br/>PARLA Gaienmae</p>
+            <p><span>Tokyoの人気店の料理をすぐにお届け</span></p>
+          </div>
+          <img src="/images/parla.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
         </div>
-        <img src="/images/grannysmith.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
+      <% end %>
+
+      <%#= link_to store_storetops_path(@store2) do%>
+        <div class="topSlides fade">
+          <div class="numbertext">
+            <p>Uber で</p>
+            <p>グラニースミス アップルパイ アンド コーヒー<br/>GRANNY SMITH APPLE PIE &amp; COFFEE</p>
+            <p><span>Tokyoの人気店の料理をすぐにお届け</span></p>
+          </div>
+          <img src="/images/grannysmith.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      <%# end %>
     </div>
 
     <div class="dots" style="text-align:center">
@@ -107,4 +113,5 @@
 
 <%= render 'footer'%>
 <!-- /footer -->
-</div> <!-- wrapper -->
+</div>
+<!-- /wrapper -->

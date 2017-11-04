@@ -1,0 +1,108 @@
+<%= render 'tops/header' %>
+<!-- /header -->
+
+<main>
+
+  <div id="video">
+    <div id="videotext">
+      <div class="shikumi">
+        <h3>UberEATS の仕組み</h3>
+        <p>UberEATS で、お気に入りの料理を簡単に取り寄せることができます。</p>
+      </div>
+    </div>
+
+    <div id="mp4">
+      <!-- <video width="100%" controls autoplay> -->
+      <video width="100%" controls>
+        <source src="https://storage.googleapis.com/ubereats-about/landing/videos/video_hero2.mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="recommend">
+    <div class="point">
+      <img src="/images/uberpoint1.jpg" alt="Good selection" class="pointimg">
+      <div class="sline"></div>
+      <h3>閲覧</h3>
+      <p>UberEATS には多数のレストランが掲載されています。アプリを開いたら、フィードをスクロールしてお好みのメニューを探すことも、レストラン名や料理の種類で検索することも可能です。注文したい料理が見つかったら、タップしてカートに追加します。。</p>
+    </div>
+    <div class="point">
+      <img src="/images/uberpoint2.gif" alt="quick delivery">
+      <div class="sline"></div>
+      <h3>注文</h3>
+      <p>お支払いの際は、ご住所、配達予定時間、税金と配達料金を含む注文価格が表示されます。内容に間違いがなければ、[注文する] をタップして完了してください。お支払いにはご登録のカードを自動的に使用するため、現金は必要ありません。</p>
+    </div>
+    <div class="point">
+      <img src="/images/uberpoint3.png" alt="favorite service">
+      <div class="sline"></div>
+      <h3>配達状況を確認</h3>
+      <p>アプリで注文状況を確認できます。まず、レストランが注文を受け付け、調理を開始します。調理が完了するころ、付近の Uber パートナーが車、自転車、またはスクーターでレストランに向かい、注文品をピックアップします。そして配達員がお客様の元へ向かいます。アプリには配達員の名前と顔写真が表示され、配達状況をマップ上で確認できます。</p>
+    </div>
+  </div><!-- recommend end -->
+
+
+
+
+  <div>
+    <div class="rellax fqa" data-rellax-speed="-2">
+      <p>詳細情報をお探しですか?</p>
+      <p>UberEATS のよくあるご質問をご覧ください。</p>
+    </div>
+
+    <div class="rellax enjoy" data-rellax-speed="0">
+      <img src="/images/banner.jpg" alt="">
+    </div>
+
+    <div class="rellax app" data-rellax-speed="2">
+
+  <div class="ubereats-app">
+    <div class="app">
+      <div class="app-list left">
+        <div class="app-text">
+          <h3>お腹が空いたらタップして食事を楽しむだけ</h3>
+          <p>UberEATS アプリがあれば、タップするだけでお気に入りの料理をいつでもお届け</p>
+        </div>
+
+        <div class="app-dl">
+          <p>アプリをダウンロード</p>
+          <ul>
+            <li>
+              <a href="#">
+              <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats/static/images/components/app-badge-app-store/Download_on_the_App_Store_Badge_JP_135x40-d555c481aa.svg" alt="App Store からダウンロード" width="172" height="51" border="0">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+              <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats/static/images/components/app-badge-google-play/ja_badge_web_generic-2b615c8a6e.png" alt="Google Play からダウンロード" width="171" height="51" border="0">
+              </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="app-list right">
+        <div class="mobile-image">
+         <img src="/images/mobilescreen.png" alt="ubereats image" class="mobileimg2 mySlides">
+         <img src="/images/mobilescreen1.png" alt="ubereats image" class="mobileimg2 mySlides">
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  <script src="rellax.min.js"></script>
+  <script>
+    // Accepts any class name
+      var rellax = new Rellax(' .rellax ', {
+          // 中央寄せ
+          center: true
+      });
+  </script>
+
+  </div>
+
+
+</main>
+
+<%= render 'tops/footer' %>
+<!-- /footer -->

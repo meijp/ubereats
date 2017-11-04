@@ -32,6 +32,6 @@ Rails.application.routes.draw do
     end
   end
 
-  #resources :company
+  resources :companies, only: [:index]
 
 end
