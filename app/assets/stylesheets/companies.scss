@@ -1,0 +1,60 @@
+#video {
+  display: flex;
+  background-color: ForestGreen;
+}
+
+#video #videotext {
+  width: 20%;
+}
+
+#video #videotext .shikumi {
+  position: relative;
+  background-color: white;
+  top: 40%;
+  left: 40%;
+  padding: 20px 30px;
+  width: 400px;
+}
+
+#video #videotext .shikumi h3 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+#video #videotext .shikumi p {
+  font-size: 15px;
+  padding: 10px;
+}
+
+#video #mp4 {
+  width: 80%;
+}
+
+// Rellax
+.fqa {
+  height: 300px;
+  background-color: lightgray;
+  z-index: 3;
+  position: relative;
+}
+
+
+.enjoy {
+  position: relative;
+  height: 500px;
+  z-index: 0;
+  /*background: url(./slide002.jpg);*/
+}
+
+.enjoy img {
+  width: 100vw;
+  z-index: -1;
+}
+
+
+.app {
+  position: relative;
+  height: 600px;
+  background-color: lightgray;
+  z-index: 3;
+}
