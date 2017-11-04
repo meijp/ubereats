@@ -1,39 +1,42 @@
-<header class="uberheader">
-  <div class="ubernav">
+<header>
+  <div class="uberheader">
+    <div class="ubernav">
 
-    <div class="navbtn">
-      <h1><%= link_to root_path, :method => :get do %>UBER <span class="logo">EATS</span><% end %></h1>
-    </div>
+      <div class="navbtn">
+        <h1><%= link_to root_path, :method => :get do %>UBER <span class="logo">EATS</span><% end %></h1>
+      </div>
 
-    <div class="navbtn">
-      <% if user_signed_in? %>
-        <ul>
-          <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
-        </ul>
-      <% elsif store_signed_in? %>
-        <ul>
-          <li><%= link_to "商品登録", new_store_product_path(current_store), class: 'btn signin'%></li>
-          <li><%= link_to "店舗情報編集", edit_store_registration_path(@store), class: 'btn signin'%></li>
-          <li><%= link_to "ログアウト", destroy_store_session_path, method: :delete, class: 'btn login'%></li>
-        </ul>
-      <% else %>
-        <ul>
-          <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
-          <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
-        </ul>
-      <% end %>
+      <div class="navbtn">
+        <% if user_signed_in? %>
+          <ul>
+            <li><%= link_to "会員情報編集", edit_user_registration_path, class: 'btn signin' %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn login'%></li>
+          </ul>
+        <% elsif store_signed_in? %>
+          <ul>
+            <li><%= link_to "商品登録", new_store_product_path(current_store), class: 'btn signin'%></li>
+            <li><%= link_to "店舗情報編集", edit_store_registration_path(@store), class: 'btn signin'%></li>
+            <li><%= link_to "ログアウト", destroy_store_session_path, method: :delete, class: 'btn login'%></li>
+          </ul>
+        <% else %>
+          <ul>
+            <li><%= link_to "サインイン", new_user_session_path, class: 'btn signin' %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class: 'btn login' %></li>
+          </ul>
+        <% end %>
 
 
-      <% if current_cart.id.blank? %>
-        <ul>
-          <li><%= link_to new_cart_item_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
-        </ul>
-      <% else %>
-        <ul>
-          <li><%= link_to cart_path(current_cart), :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
-        </ul>
-      <% end %>
+        <% if current_cart.id.blank? %>
+          <ul>
+            <li><%= link_to new_cart_item_path, :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+          </ul>
+        <% else %>
+          <ul>
+            <li><%= link_to cart_path(current_cart), :method => :get do %><i class="fa fa-shopping-bag" aria-hidden="true"></i><% end %></li>
+          </ul>
+        <% end %>
+      </div>
+
     </div>
 
   </div>

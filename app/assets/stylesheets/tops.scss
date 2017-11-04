@@ -1,22 +1,35 @@
-#wrapper {
-  max-width: 1560px;
-  min-width: 769px;
+// 共通header
+header .uberheader {
+  // padding-top: 40px;
+  // padding-bottom: 40px;
+  position: fixed;
+  background-color: white;
+  z-index: 20;
 }
 
-header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+header a {
+  text-decoration: none;
+  color: black;
 }
 
-header #nav {
+header .uberheader {
+  width: 100%;
+  background-color: white;
+  padding: 0;
+}
+
+header .ubernav {
   width: 90%;
   margin: 0 auto;
-
-}
-
-header #upper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 74px;
+  max-height: 74px;
+}
+
+header .navbtn {
+  display: flex;
 }
 
 header h1 {
@@ -41,8 +54,6 @@ header li {
 }
 
 header li a.btn {
-  // width: 94px;
-  // height: 40px;
   border: 1px solid;
   border-radius: 2px;
   font-size: 13px;
@@ -62,17 +73,30 @@ header li a.login {
   color: white;
 }
 
-header #lower{
-  padding-top: 40px;
+// main
+main {
+  background-color: #F5F5F5;
+  padding-top: 74px;
 }
 
-header #lower p {
+#searchnav {
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#searchnav #lower {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#searchnav #lower p {
   max-width: 425px;
   font-size: 36px;
   padding-bottom: 24px;
 }
 
-header #lower .textarea {
+#searchnav #lower .textarea {
   width: 425px;
   border: 1px solid;
   border-radius: 4px;
@@ -82,7 +106,7 @@ header #lower .textarea {
   padding: 12px 24px 12px 48px;
 }
 
-header #lower .submit {
+#searchnav #lower .submit {
   background-color: #59BD5A;
   color: white;
   font-size: 16px;
@@ -92,12 +116,6 @@ header #lower .submit {
   padding: 11px 20px;
   margin-left: 16px;
   min-width: 100px;
-}
-
-
-// main
-main {
-  background-color: #F5F5F5;
 }
 
 // top slideshow
@@ -294,6 +312,11 @@ main .app-list .mobile-image .mobileimg2 {
 footer {
   background-color: #262626;
   padding: 54px 42px 54px 64px;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
 }
 
 footer h2{

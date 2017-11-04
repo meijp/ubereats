@@ -1,74 +1,76 @@
 <%= render 'tops/header' %>
 <!-- /header -->
 
-<div id="menu">
-  <div id="gmap"></div>
-  <script type="text/javascript">
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'gmap'}}, function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-      handler.getMap().setZoom(17);
-        });
-  </script>
+<main>
+  <div id="menu">
+    <div id="gmap"></div>
+    <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'gmap'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        handler.getMap().setZoom(17);
+          });
+    </script>
 
-  <div class="shopping-cart">
+    <div class="shopping-cart">
 
-    <% if !@cart_item.nil? && @cart_item.errors.any? %>
-      <ul>
-      <% @cart_item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    <% end %>
-
-    <% if @cart_items.size == 0 %>
-      <p>There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.</p>
-    <% else %>
-
-    <div class="upper">
-      <div class="cart-info">
-        <% num = 0 %>
-        <% @cart_items.each do |cart_item| %>
-          <% if num == 0 %>
-            <div class="cart-img" style="background-image: url('<%= cart_item.store.image %>')">
-              <div class="shop-info">
-                <p class="ordertitle">ご注文内容</p>
-                <p class="shop-name"><%= cart_item.store.name %><%= cart_item.store.en_name %></p>
-                <p class="open"><%= cart_item.store.mindelitime %> - <%= cart_item.store.maxdelitime %> min</p>
-              </div>
-            </div>
-          <% end %>
-          <% num += 1 %>
+      <% if !@cart_item.nil? && @cart_item.errors.any? %>
+        <ul>
+        <% @cart_item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
-      </div>
-    </div>
-
-    <div class="lower">
-      <% @cart_items.each do |cart_item| %>
-        <%= render 'carts/cart_row', product: cart_item.product, cart_item: cart_item, show_total: true %>
+        </ul>
       <% end %>
 
-      <div class="cost">
-        <p>Delivery Fee</p>
-        <p class="price">¥<%= @cart.shipping %></p>
-      </div>
-      <div class="cost">
-        <p>Total</p>
-        <p class="price">¥<%= @cart.total %></p>
-      </div>
-
-      <% if user_signed_in? %>
-        <%= link_to '注文する', new_payment_path, class: 'btn btn-warning' %>
+      <% if @cart_items.size == 0 %>
+        <p>There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.</p>
       <% else %>
-        <%= link_to '注文する', new_user_session_path %>
-      <% end %>
-    </div> <!-- lower end -->
 
-    <% end %>
-  </div> <!-- shopping-cart end -->
-</div> <!-- menu end -->
+      <div class="upper">
+        <div class="cart-info">
+          <% num = 0 %>
+          <% @cart_items.each do |cart_item| %>
+            <% if num == 0 %>
+              <div class="cart-img" style="background-image: url('<%= cart_item.store.image %>')">
+                <div class="shop-info">
+                  <p class="ordertitle">ご注文内容</p>
+                  <p class="shop-name"><%= cart_item.store.name %><%= cart_item.store.en_name %></p>
+                  <p class="open"><%= cart_item.store.mindelitime %> - <%= cart_item.store.maxdelitime %> min</p>
+                </div>
+              </div>
+            <% end %>
+            <% num += 1 %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="lower">
+        <% @cart_items.each do |cart_item| %>
+          <%= render 'carts/cart_row', product: cart_item.product, cart_item: cart_item, show_total: true %>
+        <% end %>
+
+        <div class="cost">
+          <p>Delivery Fee</p>
+          <p class="price">¥<%= @cart.shipping %></p>
+        </div>
+        <div class="cost">
+          <p>Total</p>
+          <p class="price">¥<%= @cart.total %></p>
+        </div>
+
+        <% if user_signed_in? %>
+          <%= link_to '注文する', new_payment_path, class: 'btn btn-warning' %>
+        <% else %>
+          <%= link_to '注文する', new_user_session_path %>
+        <% end %>
+      </div> <!-- lower end -->
+
+      <% end %>
+    </div> <!-- shopping-cart end -->
+  </div> <!-- menu end -->
+</main>
 
 <%= render 'tops/footer' %>
 <!-- /footer -->
