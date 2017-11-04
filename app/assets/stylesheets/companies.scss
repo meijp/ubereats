@@ -32,12 +32,17 @@
 
 // Rellax
 .fqa {
-  height: 300px;
-  background-color: lightgray;
+  height: 200px;
   z-index: 3;
   position: relative;
+  background-color: gray;
 }
 
+.fqa .fqainfo{
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
 
 .enjoy {
   position: relative;
@@ -55,6 +60,6 @@
 .app {
   position: relative;
   height: 600px;
-  background-color: lightgray;
   z-index: 3;
+  background-color: #F5F5F5;
 }
