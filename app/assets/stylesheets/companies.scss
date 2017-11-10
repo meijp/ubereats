@@ -1,6 +1,11 @@
+#aboutwrapper {
+  background-color: white;
+}
+
 #video {
   display: flex;
-  background-color: ForestGreen;
+  // background-color: ForestGreen;
+  background-image: image-url("/images/nami.jpg");
 }
 
 #video #videotext {
@@ -10,14 +15,15 @@
 #video #videotext .shikumi {
   position: relative;
   background-color: white;
-  top: 40%;
+  top: 20%;
   left: 40%;
-  padding: 20px 30px;
-  width: 400px;
+  padding: 40px 50px;
+  width: 450px;
+  font-weight: lighter;
 }
 
 #video #videotext .shikumi h3 {
-  font-size: 30px;
+  font-size: 45px;
   padding: 10px;
 }
 
@@ -30,29 +36,254 @@
   width: 80%;
 }
 
+
+// css-slider ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+.css-slider {
+  width: 220px;
+  height: 160px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.slide-item {
+  width: 220px;
+  height: 130px;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 220px;
+  position: relative;
+  left: 0;
+  will-change: transform;
+  animation: slider 10s infinite;
+}
+
+@keyframes slider {
+  0% { transform: translateY(0); }
+  // 33% { transform: translateY(-300px); }
+  // 66% { transform: translateY(-600px); }
+  50% { transform: translateY(-210px); }
+  100% { transform: translateY(0); }
+}
+
+.slide-item1 {
+  padding: 5px 10px 10px 10px;
+}
+
+.slide-item1 p {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.slide-item1 p span {
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+#sliderpoint {
+  margin-bottom: 40px;
+}
+
 // Rellax
+
+// ここから
+// .nfc-new {
+//   display: flex;
+//   height: 600px;
+// }
+
+// .nfcn-left {
+//   width: calc(100% - 60vw)
+// }
+
+// .nfcn-left1 {
+//   background-color: yellow;
+// }
+
+// .nfcn-left2 {
+//   background-color: green;
+// }
+
+// .nfcn-right {
+//  width: 60%;
+//  padding: 100px 200px;
+// }
+
+// .nfcmobile {
+//   background-image: url("/images/phone_shell.png");
+//   background-repeat: no-repeat;
+//   background-size: 300px;
+//   height: 600px;
+//   width: 300px;
+// }
+
+// .nfcmobile {
+//   position: relative;
+//   top: -580px;
+//   left: 30%;
+// }
+
+// .nfcmobile video {
+//   position: relative;
+//   top: 74px;
+//   left: 42px;
+// }
+
+// .nfcn-btn {
+//   position: absolute;
+//   top: -500px;
+// }
+// ここまで
+
+.sfcontainer {
+  height: 750px;
+  margin-bottom: 50px;
+}
+
+.sfcontainer h2 {
+  width: 60%;
+  height: 180px;
+  margin: 0 auto;
+  line-height: 180px;
+  font-size: 30px;
+  border-top: solid 1px silver;
+}
+
+.nfcontent {
+  display: flex;
+  height: 500px;
+}
+
+.nfc-left {
+  width: calc(100% - 60vw)
+}
+
+.nfcl1 {
+  background-color: gold;
+}
+
+.nfcl2 {
+  background-color: green;
+}
+
+.nfc-right {
+  width: 60%;
+  padding: 70px 200px;
+}
+
+.nfc-right h3 {
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.nfc-right p {
+  font-size: 13px;
+  color: darkgray;
+  padding-bottom: 15px;
+}
+
+.nfcmobile {
+  background-image: url("/images/phone_shell.png");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  height: 600px;
+  width: 300px;
+  position: relative;
+  top: -520px;
+  left: 27%;
+}
+
+.nfcmobile video {
+  position: relative;
+  top: 74px;
+  left: 42px;
+}
+
+.nextbtn {
+  position: absolute;
+  top: 60%;
+  right: 23%;
+  width: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  // position: absolute;
+  // top: 60%;
+  // width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+// /* Position the "next button" to the right */
+// .next {
+//   right: 23%;
+//   border-radius: 3px 0 0 3px;
+// }
+
+// .prev {
+//   right: 25%;
+// }
+
+
+
 .fqa {
   height: 200px;
   z-index: 3;
   position: relative;
-  background-color: gray;
+  background-color: WhiteSmoke;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
-.fqa .fqainfo{
+.fqacontents {
+  display: flex;
   width: 70%;
   margin: 0 auto;
-  padding: 50px 0px;
+  justify-content: space-around;
+}
+
+.fqainfo  {
+  // margin-right: 100px;
+}
+
+.fqainfo h3 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.fqainfo p {
+  font-size: 13px;
+}
+
+.fqabtn {
+  line-height: 60px;
+}
+
+.fqabtn p {
+  font-size: 12px;
+  padding: 5px 20px;
+  border: solid;
 }
 
 .enjoy {
   position: relative;
-  height: 500px;
+  height: 600px;
   z-index: 0;
   /*background: url(./slide002.jpg);*/
 }
 
 .enjoy img {
+  position: relative;
   width: 100vw;
+  top: -100px;
   z-index: -1;
 }
 
